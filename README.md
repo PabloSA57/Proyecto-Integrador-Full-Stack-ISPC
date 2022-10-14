@@ -7,7 +7,7 @@
 * Medina Gonzalo
 * Franco Mauricio
 * Sierra Pablo
-* Vollmann Silvina
+* Vollmann Silvana
 * Bravo Estela Margarita
 * Echavarria Martin
 * Salto Claudia
