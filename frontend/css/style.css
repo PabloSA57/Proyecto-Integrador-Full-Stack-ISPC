@@ -2,9 +2,134 @@
     ---color-principal: #060818;
     ---color-secundario: #F5C057;
     ---color-card: #FFFFFF;
-    ---color-background: #FEFEFE;
+    ---color-background: #efefef;
+}
+
+
+article, div, footer, header, main, nav, section,span, figure{
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    background-color: var(---color-background)
+}
+
+/*Home Client*/
+    /*header */
+header {
+    background-color: var(---color-principal);
 }
 
 .logo {
+    height: 3rem;
+}
+
+.nav-link {
+    color: var(---color-card);
+}
+
+.nav-link:hover {
+    color: var(---color-secundario);
+}
+
+.active {
+    color: var(---color-secundario)
+}
+.con-logo a img {
     height: 50px;
 }
+.presentacion {
+    width: 100%;
+    height: 350px;
+    background-color: #06089000;
+}
+
+.presentacion img {
+    width: 100%;
+    height: 100%;
+}
+
+.presentacion-text{
+    position: absolute;
+    top: 7rem;
+    right: calc(50% - 300px);
+}
+
+.presentacion-text h3{
+    font-size: 4rem;
+    color: var(---color-principal);
+    font-weight: 600;
+}
+    /*main*/
+    main {
+        min-height: 100vh;
+    }
+
+    /*Servicio*/
+    .servicio, .sucursales, .contacto-about {
+        padding: 1rem;
+            min-height: 200px;
+        }
+    .con-servicio {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card-servicio {
+        display: flex;
+        background-color: var(---color-card);
+        padding: 2rem;
+        min-height: 4rem;
+        border-radius: 10px;
+        color: var(---color-principal);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        min-width: 20rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-servicio:hover {
+        transform: scale(1.1);
+    }
+
+    /*Contacto-About*/
+    .contacto-about {
+        display: flex;
+        gap: 1rem;
+    }
+    .contacto, .about {
+        width: 50%;
+    }
+    .contacto form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .contacto form button {
+        background-color: var(---color-principal);
+        color: var(---color-card);
+    }
+    /*footer*/
+
+    footer {
+        min-height: 9rem;
+        width: 100%;
+        background-color: var(---color-principal);
+        padding: 1.5rem;
+    }
+
+    .con-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: var(---color-card)
+    }
