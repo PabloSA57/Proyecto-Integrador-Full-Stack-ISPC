@@ -98,7 +98,18 @@ header {
     .card-servicio:hover {
         transform: scale(1.1);
     }
+     
+    .aside { 
+    width:25%;
+    background-color:rgba(184, 221, 252, 0.952);
+    margin;4px;
+    float:right;
+    height:450px;
+    justify-content:center;
+    cursor: pointer;
 
+    }
+    
     /*Contacto-About*/
     .contacto-about {
         display: flex;
