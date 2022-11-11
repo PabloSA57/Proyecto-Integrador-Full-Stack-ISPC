@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -24,19 +24,21 @@
                             <a class="nav-link " aria-current="page" href="./index.html#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Presupuesto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
+                            <a class="nav-link" href="#servicios">Servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./page/sucursales.html">Sucursales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#contacto">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de</a>
+                            <a class="nav-link" href="#acerca-de">Acerca de</a>
+                        </li>
+                        <li class="nav-item login-register">
+                            <a class="nav-link" href="./page/login.html"><button class="btn-login">Login</button></a>
+                            
+                            <a class="nav-link" href="./page/login.html"><button class="btn-register">Register</button></a>
                         </li>
                     </ul>
                 </div>
@@ -53,6 +55,25 @@
                 </h3>
             </div>
         </section>
+            
+        <section class="ofrecimiento">
+            <div class="con-ofreci">
+                    <section class="card-ofreci">
+                        <h5>Diagnóstico completo</h5>
+                        <img src="image/diagnostico.jpeg" alt="Servicio de diagnóstico computarizado del vehículo acompañado de informe sin cargo." />
+                        
+                    </section>
+                    <section class="card-ofreci">
+                        <h5>Asesoramiento profesional</h5>
+                        <img src="image/asesoramiento.jpg" alt="Asesoramiento especializado orientado a maximizar la vida útil de los vehículos, tanto livianos como utilitarios." />
+                    </section>
+                    <section class="card-ofreci">
+                        <h5>Garantía de calidad</h5>
+                        <img src="image/garantiadeservicio.jpg" alt="Productos y servicios de máxima calidad, homologados por fabricantes y terminales automotrices." />
+                    </section>
+                </div>
+        </section>
+        
 
         <section id="servicios" class="servicio">
             <h4>
@@ -79,30 +100,20 @@
                 </div>
             </div>
         </section>
-
-        <section id="sucursales" class="sucursales">
-            <h4>
-                Sucursales
-            </h4>
-        </section>
-        <section>
-            <h1>DIAGNOSTICO COMPLETO</h1>
-            <p>
-            <img src="image/diagnostico.jpeg" alt="Servicio de diagnóstico computarizado del vehículo acompañado de informe sin cargo." />
-            </p>
-        </section>
-        <section>
-            <h1>ASESORAMIENTO PROFESIONAL</h1>
-            <p>
-            <img src="image/asesoramiento.jpg" alt="Asesoramiento especializado orientado a maximizar la vida útil de los vehículos, tanto livianos como utilitarios." />"
-            </p>
-        </section>
-        <section>
-            <h1>GARANTIA DE CALIDAD</h1>
-            <p>
-            <img src="image/garantiadeservicio.jpg" alt="Productos y servicios de máxima calidad, homologados por fabricantes y terminales automotrices." />
-            </p>
-        </section>
+        
+        <aside>
+                <div style="color:#0e0e68">
+                    <h3> Cuidados del vehículo - Consejos y sugerencias</h3> 
+                </div>
+                <p>
+                </p>
+                <p> Es importante que se realice un mantenimiento regular para detectar cualquier problema a tiempo, anticipándose así, a una parada intempestiva del vehículo y a futuras reparaciones costosas.</p>
+                <p>
+                </p>
+                <p> Ultima entrada visitada</p>
+                <a>https://www.axionenergy.com/Paginas/Claves-consejos-mantener-auto.aspx</a>
+        </aside>
+                        
         <section class="contacto-about">
             <div id="contacto" class="contacto">
                 <h4>
@@ -115,12 +126,12 @@
                     <label for="">Email</label>
                     <input type="mail">
                     <label for="">Mensaje</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea class="contact-textarea" name="" id="" cols="20" rows="10"></textarea>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
 
-            <div class="about">
+            <div class="about" id="acerca-de">
                 <h4>Acerca de</h4>
                 <div>
                     <p>
@@ -135,7 +146,10 @@
     <footer>
         <div class="con-footer">
             <div>
-                <img class="logo" src="./image/logo.png" alt="logo">
+                <a href="">
+                    <img class="logo" src="./image/logo.png" alt="logo">
+                </a>
+                
             </div>
 
             <div>
@@ -164,5 +178,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
