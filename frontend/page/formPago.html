@@ -87,11 +87,11 @@
 
             <form class="form-register" style="color: whitesmoke;">
                 <h5>Datos personales del cliente</h5>
-                <input class="control" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input class="control" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                <input class="control" type="number" name="cuil" id="cuil" placeholder="Cuit/cuil">
-                <input class="control" type="number" name="tel" id="tel" placeholder="Telefono">
-                <input class="control" type="email" name="email" id="email" placeholder="Correo">
+                <input class="control" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                <input class="control" type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                <input class="control" type="number" name="cuil" id="cuil" placeholder="Cuit/cuil" required min="100000000000" max="999999999999">
+                <input class="control" type="number" name="tel" id="tel" placeholder="Telefono" required min="8" max="10">
+                <input class="control" type="email" name="email" id="email" placeholder="Correo" required>
 
                 <div class="control" style="color: whitesmoke;">
                     <h6>Seleccionar El Tipo de Servicio Realizado</h6>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
 
-                <input class="control" type="number" name="importe" id="importe" placeholder="Importe $$$">
+                <input class="control" type="number" name="importe" id="importe" placeholder="Importe $$$" required min="1000" max="9999999">
                 
                 <div class="control" style="color: whitesmoke;">
                     <h6>Seleccionar El Tipo de Pago</h6>
