@@ -280,8 +280,30 @@ header {
         body {
             font-size: 9px;
         }
-       .card-ofreci img {
-           width: 5em;
-       }
+        .card-ofreci img {
+            width: 5em;
+        }
+        }
+
+    /**REGISTER**/
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+        background-color: var(---color-card);
+        gap: 0.5em;
+    }
+
+    .btn-register {
+        background-color: var(---color-principal)
+    }
+    .con-form {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../image/taller.png");
     }
     
