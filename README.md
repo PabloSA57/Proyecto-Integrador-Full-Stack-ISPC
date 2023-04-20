@@ -6,7 +6,7 @@
 * Pablo Sierra-
 * Silvana Graciela Vollmann-
 * Claudia Gabriela Salto-
-* Martín Echavarria-
+* Martín Echavarría-
 * Estela Margarita Bravo-
 * Franco Mauricio-
 * Francisco Martiniano Erroz
