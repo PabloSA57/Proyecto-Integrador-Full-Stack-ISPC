@@ -1,14 +1,12 @@
-# Proyecto-Integrador-Full-Stack-ISPC
+# Proyecto-Integrador-Full-Stack-ISPC 2023
 *** 
 ##  Proyecto: "Service del Automotor"
 ### Integrantes
-* Sabatella Evana
-* Frutos Ariel
-* Medina Gonzalo
-* Franco Mauricio
-* Sierra Pablo
-* Vollmann Silvana
-* Bravo Estela Margarita
-* Echavarria Martin
-* Salto Claudia
-* Savid Agustin
+* Evana Daniela Sabatella-
+* Pablo Sierra-
+* Silvana Graciela Vollmann-
+* Claudia Gabriela Salto-
+* Martín Echavarria-
+* Estela Margarita Bravo-
+* Franco Mauricio-
+* Francisco Martiniano Erroz
