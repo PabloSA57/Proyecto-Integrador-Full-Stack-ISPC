@@ -8,5 +8,5 @@
 * Claudia Gabriela Salto-
 * Martín Echavarría-
 * Estela Margarita Bravo-
-* Franco Mauricio-
+* Mauricio Javier Franco-
 * Francisco Martiniano Erroz
