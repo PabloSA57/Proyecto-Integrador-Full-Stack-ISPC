@@ -1,6 +1,7 @@
 # Proyecto-Integrador-Full-Stack-ISPC 2023
 *** 
 ##  Proyecto: "Service del Automotor"
+Repositorio Grupal
 ### Integrantes
 * Evana Daniela Sabatella-
 * Pablo Sierra-
@@ -10,3 +11,6 @@
 * Estela Margarita Bravo-
 * Mauricio Javier Franco-
 * Francisco Martiniano Erroz-
+*** 
+El proyecto consiste en un gestor de servicios para el automotor que permite gestionar el registro de usuarios y empleados, solicitar turnos y presupuestos por los distintos servicios ofrecidos. Además contará con un módulo e-commerce para cobro y facturación de los servicios realizados.
+
