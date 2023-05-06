@@ -1,13 +1,13 @@
 header.fondo {
-    padding-top: 8rem;
+    padding-top: 12rem;
     padding-bottom: 6rem;
     padding-right: 2rem;
-    text-align: right;
-    color: #000000;
-    background-image: url("https://github.com/EvanaSabatella1989/Proyecto-Integrador-Full-Stack-ISPC/blob/main/maqueta/frontend/image/taller.png?raw=true");
+    text-align:-webkit-center ;
+    color: goldenrod;
+    background-image: url("../src/assets/pagina/bannerPrincipal.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center center;
+ 
     background-size: cover;
     height: 400px;
   }
@@ -18,4 +18,3 @@ header.fondo {
   }
 
   
-
