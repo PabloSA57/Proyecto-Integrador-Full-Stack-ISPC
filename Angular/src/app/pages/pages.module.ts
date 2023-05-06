@@ -12,6 +12,7 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { LoginComponent } from './login/login.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PreguntasFrecuentesComponent } from './preguntas-frecuentes/preguntas-frecuentes.component';
+import { CardProductComponent } from './carrito/components/card-product/card-product.component';
 
 
 
@@ -27,7 +28,8 @@ import { PreguntasFrecuentesComponent } from './preguntas-frecuentes/preguntas-f
     RegistrarseComponent,
     LoginComponent,
     CarritoComponent,
-    PreguntasFrecuentesComponent
+    PreguntasFrecuentesComponent,
+    CardProductComponent
   ],
   imports: [
     CommonModule,
