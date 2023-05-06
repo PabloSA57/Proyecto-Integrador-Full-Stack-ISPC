@@ -11,6 +11,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { LoginComponent } from './login/login.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { PreguntasFrecuentesComponent } from './preguntas-frecuentes/preguntas-frecuentes.component';
 
 
 
@@ -25,7 +26,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     ContactoComponent,
     RegistrarseComponent,
     LoginComponent,
-    CarritoComponent
+    CarritoComponent,
+    PreguntasFrecuentesComponent
   ],
   imports: [
     CommonModule,
