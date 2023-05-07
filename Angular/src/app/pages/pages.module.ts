@@ -14,6 +14,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { PreguntasFrecuentesComponent } from './preguntas-frecuentes/preguntas-frecuentes.component';
 import { CardProductComponent } from './carrito/components/card-product/card-product.component';
 import { LayoutModule } from '../layout/layout.module';
+import { ProductosComponent } from './productos/productos.component';
 
 
 
@@ -30,7 +31,8 @@ import { LayoutModule } from '../layout/layout.module';
     LoginComponent,
     CarritoComponent,
     PreguntasFrecuentesComponent,
-    CardProductComponent
+    CardProductComponent,
+    ProductosComponent
   ],
   imports: [
     CommonModule,
