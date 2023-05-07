@@ -27,9 +27,12 @@ export class CarritoComponent implements OnInit {
       precio: 500
     }
   ]
+
+  total_precio = 0
   constructor() { }
 
   ngOnInit(): void {
+    this.total_precio =  this.products.map(p => p.precio).reduce((a,b) => a + b, 0)
   }
 
 }

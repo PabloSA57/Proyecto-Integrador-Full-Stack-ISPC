@@ -4,19 +4,31 @@
   >
     <div class="d-flex col-12 col-md-6 gap-5 align-items-md-center">
       <img src="" alt="" style="height: 50px; width: 50px" />
-      <h5 class="text-center fw-semilbold">Nombre del pruducto</h5>
+      <h5 class="text-center fw-semilbold">{{ product.name }}</h5>
     </div>
 
     <div
       class="d-flex col-12 col-md-6 gap-5 align-items-md-center justify-content-between mt-4"
     >
-      <input type="text mr-3 " style="width: 100px" />
-      <h3 class="fw-normal">$500</h3>
+      <form class="btn-quality">
+        <input type="hidden" name="" id="" />
+        <button disabled="true"><span>-</span></button>
+        <div class="andes-form-control">
+          <label>
+            <div class="andes-form-control__control">
+              <input value="1" />
+            </div>
+          </label>
+        </div>
+        <button disabled="true"><span>+</span></button>
+      </form>
+      <h3 class="fw-normal">${{ product.precio }}</h3>
     </div>
   </div>
 
   <div class="d-flex gap-3 mt-3 more-btn">
     <span class="text-primary cursor-pointer">Eliminar</span>
     <span class="text-primary">Comprar ahora</span>
+    <span class="text-primary">Detalle</span>
   </div>
 </div>
