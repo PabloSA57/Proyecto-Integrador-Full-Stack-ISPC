@@ -7,6 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
 
+  products = [
+    {
+      id:1,
+      name: 'Oil',
+      img: '',
+      precio: 500
+    },
+    {
+      id:2,
+      name: 'Oil',
+      img: '',
+      precio: 700
+    },
+    {
+      id:3,
+      name: 'Oil',
+      img: '',
+      precio: 500
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {
