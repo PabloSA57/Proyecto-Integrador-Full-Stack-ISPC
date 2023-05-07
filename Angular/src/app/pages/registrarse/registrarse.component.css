@@ -1,0 +1,22 @@
+form{
+    max-width: 500px;
+   
+   
+}
+
+.con-form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-color: #F5C057;
+    
+}
+
+.btn-register{
+    background-color: #F5C057;
+}
+.btn-register:hover {
+    background-color: #FFFFFF;
+    border-color: #F5C057;
+    transition-duration: 1s;
+}

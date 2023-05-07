@@ -124,8 +124,8 @@ h5 {
 .card-ofreci img {
     width: 10em;
     max-height: 5em;
+    
 }
-
 
 .con-servicio {
 
@@ -133,6 +133,7 @@ h5 {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 
 .card-servicio {
@@ -149,6 +150,7 @@ h5 {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 5px;
+  
 }
 
 /*style cards*/
@@ -157,8 +159,16 @@ h5 {
     color: #FFFFFF;
 }
 
+.card-img-top{
+    height: 41vh;
+}
+
 .card-body h5 {
     color: #FFFFFF;
+
+}
+#ver-mas{
+    color: #F5C057;
 }
 
 .list-group li,
@@ -196,3 +206,5 @@ aside {
     display: inline-table;
 
 }
+
+    /*box-shadow:5px 5px 10px #565656, -5px -5px 10px #8a8a8a;*/

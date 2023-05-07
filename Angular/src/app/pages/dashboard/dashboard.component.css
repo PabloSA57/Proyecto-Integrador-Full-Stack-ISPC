@@ -308,7 +308,7 @@ header {
         flex-direction: column;
         width: 90%;
         /* padding: 1em; */
-        background-color: var(---color-card);
+        /* background-color: var(---color-card); */
         gap: 0.5em;
     }
 
