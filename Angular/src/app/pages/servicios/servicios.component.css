@@ -150,6 +150,7 @@ h5 {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 5px;
+   
   
 }
 
@@ -157,10 +158,12 @@ h5 {
 .card-body {
     background-color: #060818;
     color: #FFFFFF;
+    
 }
 
 .card-img-top{
     height: 41vh;
+    
 }
 
 .card-body h5 {
