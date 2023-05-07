@@ -7,16 +7,9 @@ form{
 .con-form {
     display: flex;
     width: 100%;
+    align-items: center;
     justify-content: center;
     border-color: #F5C057;
-    
+    height: 80vh;
 }
 
-.btn-register{
-    background-color: #F5C057;
-}
-.btn-register:hover {
-    background-color: #FFFFFF;
-    border-color: #F5C057;
-    transition-duration: 1s;
-}

@@ -1,1 +1,47 @@
-<p>login works!</p>
+<section class="con-log">
+  <form
+    class="col-md-5 bg-white needs-validation mx-auto d-flex flex-column gap-4 shadow p-3"
+    novalidate
+  >
+    <h2>Login</h2>
+
+    <div class="col-12">
+      <label for="validationEmail" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="validationEmail"
+        aria-describedby="inputGroupPrepend"
+        placeholder="juanperez@gmail.com"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
+
+      <div class="invalid-feedback">Please choose a email.</div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationPassword" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="validationPassword"
+        aria-describedby="inputGroupPrepend"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
+
+      <div class="invalid-feedback">Please choose a password.</div>
+    </div>
+
+    <div class="col-12">
+      <button class="col-12 btn btn-primary" type="submit">Login</button>
+    </div>
+
+    <div class="col-12">
+      <p routerLink="/register">
+        No tienes una cuenta? <a routerLink="/registrarse">Registrate</a>
+      </p>
+    </div>
+  </form>
+</section>
