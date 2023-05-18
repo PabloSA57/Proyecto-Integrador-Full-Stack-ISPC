@@ -5,154 +5,11 @@
     ---color-background: #efefef;
 }
 
-.row {
-
-    justify-content: center;
-}
-
-.logo {
-    height: 1.5em;
-}
-
-.nav-link {
-    color: #FFFFFF;
-}
-
-.nav-link:hover {
-    color: #F5C057;
-}
-
-.login-register {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 0;
-}
-
-.btn:hover {
-    background-color: #FFFFFF;
-    border-color: #F5C057;
-    transition-duration: 1s;
-}
-
-.btn-login,
-.btn-register {
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9em;
-    min-width: 5.5em;
-}
-
-.btn-login {
-    background-color: #F5C057;
-    color: #060818;
-}
-
-.btn-register {
-    background-color: #060818;
-    color: #F5C057;
-}
-
-.navbar-toggler-icon {
-    background-color: #F5C057;
-}
-
-.active {
-    color: #F5C057;
-}
-
-.con-logo a img {
-    height: 50px;
-}
-
-.presentacion {
-    width: 100%;
-    height: 20em;
-    background-color: #06089000;
-}
-
-.presentacion img {
-    width: 100%;
-    height: 112%;
-}
-
-.presentacion-text {
-    position: absolute;
-    top: 35%;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    font-size: 3em;
-    color: #060818;
-    font-weight: 600;
-}
-
 h5 {
     color: #efefef;
     font-size: 1em;
 }
 
-/* Ofrecimiento */
-.ofrecimiento {
-    width: 100%;
-
-}
-
-.con-ofreci,
-.card-ofreci {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.con-ofreci {
-    justify-content: space-between;
-    background-color: var(---color-principal);
-}
-
-.card-ofreci {
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    background-color: var(---color-principal);
-    color: var(---color-card);
-    border-radius: 5px;
-    padding: 0.5em;
-}
-
-.card-ofreci img {
-    width: 10em;
-    max-height: 5em;
-    
-}
-
-.con-servicio {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-}
-
-.card-servicio {
-    display: flex;
-    background-color: var(---color-card);
-    padding: 1em;
-    min-height: 4em;
-    border-radius: 10px;
-    color: var(---color-principal);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    min-width: 17em;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 5px;
-   
-  
-}
 
 /*style cards*/
 .card-body {
@@ -174,40 +31,16 @@ h5 {
     color: #F5C057;
 }
 
-.list-group li,
-h5 {
-    color: #FFFFFF;
-    background-color: #060818;
-}
+
 
 .btn {
     background-color: #F5C057;
 
 }
 
-
-
-.card-servicio:hover {
-    transform: scale(1.1);
-    color: #060818;
+.row ul li{
+    list-style: none;
 }
 
-.card-servicio img {
-    max-width: 13em;
-
-}
-
-aside {
-    width: 25%;
-    background-color: var(---color-principal);
-    color: white;
-    padding: 5px;
-    margin: 4px;
-    float: right;
-    height: 343px;
-    justify-content: center;
-    display: inline-table;
-
-}
 
     /*box-shadow:5px 5px 10px #565656, -5px -5px 10px #8a8a8a;*/

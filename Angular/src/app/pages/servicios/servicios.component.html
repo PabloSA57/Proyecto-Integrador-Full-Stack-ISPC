@@ -1,12 +1,61 @@
 <main>
-    <div class="row">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
 
+    <div class="row" >
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+            <ul *ngFor="let item of miServi">
+                <li>
+                    <div class="col">
+                        <div class="card">
+                            <img [src]="item.img" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title ">{{item.nombre}}</h5>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false"
+                                            aria-controls="collapse">
+                                            Ver Más
+                                        </button>
+                                    </h2>
+                                    <div id="collapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            {{item.descripcion}}
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar
+                                                turno</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</main>
+
+
+
+
+
+
+
+<!--
+<div class="row" *ngFor="let item of miServi">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card">
-                    <img src="../../../assets/pagina/pintura.jpg" class="card-img-top" alt="...">
+                    <img [src]="item.img" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title ">CHAPA Y PINTURA</h5>
+                        <h5 class="card-title ">{{item.nombre}}</h5>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button  collapsed" id="ver-mas" type="button"
@@ -18,9 +67,7 @@
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Contamos con un personal
-                                    altamente calificados para realizar el servicio de Chapa y pintura de tu vehiculo.
-                                    Trabajamos tambien con cabinas de pintura y colores originales.
+                                    {{item.descripcion}}
                                 </div>
                                 <div class="card-footer">
                                     <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
@@ -30,7 +77,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="col">
                 <div class="card">
@@ -328,5 +374,4 @@
             </div>
 
         </div>
-    </div>
-</main>
+    </div> -->

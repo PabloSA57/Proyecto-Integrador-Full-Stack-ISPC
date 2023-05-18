@@ -1,0 +1,77 @@
+{
+  "servicios":[
+    {
+      "id":1,
+      "nombre":"CHAPA Y PINTURA",
+      "descripcion":"Contamos con un personal altamente calificados para realizar el servicio de Chapa y pintura de tu vehiculo. Trabajamos tambien con cabinas de pintura y colores originales.",
+      "img":"/assets/pagina/pintura.jpg"
+
+    },
+    {
+      "id":2,
+      "nombre":"COCHES HÍBRIDOS",
+      "descripcion":"En nuestros talleres nos hemos adaptado a nuestro tiempo, y es por ello que también ofrecemos un servicio de reparación y mantenimiento a los coches híbridos; no solo a los convencionales.",
+      "img":"/assets/pagina/service.png"
+
+    },
+    {
+      "id":3,
+      "nombre":"MANTENIMIENTO INTEGRAL",
+      "descripcion":"Desde cambio de aceites, filtros, pastillas o discos de freno hasta distribuciones, correas... Sea cual sea los cuidados de tu vehículo, le daremos un servicio completo de calidad",
+      "img":"/assets/pagina/reparacion.jpg"
+
+    },{
+      "id":4,
+      "nombre":"DIAGNOSIS",
+      "descripcion":"Para circular con seguridad es fundamental realizar una diagnosis al vehículo y verificar que cumple los requisitos mínimos de seguridad",
+      "img":"/assets/pagina/diagnosis.JPEG"
+
+    },{
+      "id":5,
+      "nombre":"MECÁNICA EN GENERAL",
+      "descripcion":"Contamos con el mejor servicio técnico especializado en climatización de automotores y calefacción.",
+      "img":"/assets/pagina/mecanica.jpg"
+
+    },
+    {
+      "id":6,
+      "nombre":"NEUMATICOS",
+      "descripcion":"Contamos con el mejor servicio técnico especializado en climatización de automotores y calefacción.",
+      "img":"/assets/pagina/neumatico.jpg"
+
+    },
+    {
+      "id":7,
+      "nombre":"ELECTRÓNICA DEL VEHÍCULO",
+      "descripcion":"Contamos con el mejor servicio técnico especializado en climatización de automotores y calefacción.",
+      "img":"/assets/pagina/electronica.png"
+
+    },
+    {
+      "id":8,
+      "nombre":"INYECIÓN DEL VEHÍCULO",
+      "descripcion":"Contamos con el mejor servicio técnico especializado en climatización de automotores y calefacción.",
+      "img":"/assets/pagina/inyeccion.jpg"
+
+    },
+    {
+      "id":9,
+      "nombre":"CLIMATIZACIÓN",
+      "descripcion":"Contamos con el mejor servicio técnico especializado en climatización de automotores y calefacción.",
+      "img":"/assets/pagina/clima.jpg"
+
+    },
+    {
+      "id":10,
+      "nombre":"ELECTRICIDAD DEL VEHÍCULO",
+      "descripcion":"Somos especialistas en el diagnóstico de las averías eléctricas y nuestro objetivo es ofrecer la máxima garantía en todas nuestras reparaciones.",
+      "img":"/assets/pagina/electricidad.png"
+
+    }
+
+
+
+
+  ]
+  
+}
