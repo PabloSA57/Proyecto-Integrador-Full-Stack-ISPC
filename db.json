@@ -72,6 +72,74 @@
 
 
 
+  ],
+
+  "Productos":[
+    {
+      "id":1,
+      "nombre":"Aceite Shell 5w30 4lts",
+      "cantidad":"45",
+      "precio":13500,
+      "descripcion":"descripcion",
+      "img":"../../../assets/productos/img01.png"
+    },
+    {
+      "id":2,
+      "nombre":"Elaion F50 5w-40 X 4 Lt",
+      "cantidad":"100",
+      "precio":16900,
+      "descripcion":"",
+      "img":"../../../assets/productos/img02.png"
+    },
+    {
+      "id":3,
+      "nombre":"Kit De Distribucion Bosch Vw Gol Polo Saveiro 1.9",
+      "cantidad":"5",
+      "precio":39900,
+      "descripcion":"",
+      "img":"../../../assets/productos/img03.png"
+    },
+    {
+      "id":4,
+      "nombre":"Filtro De Aire Peugeot 206 306 Citroen Picasso 1.4 1.6 2.0hd",
+      "cantidad":"10",
+      "precio":13500,
+      "descripcion":"",
+      "img":"../../../assets/productos/img04.png"
+    },
+    {
+      "id":5,
+      "nombre":"Aceite Shell 5w30 4lts",
+      "cantidad":"5",
+      "precio":13500,
+      "descripcion":"descripcion",
+      "img":"../../../assets/productos/img05.png"
+    },
+    {
+      "id":6,
+      "nombre":"Elaion F50 5w-40 X 4 Lt",
+      "cantidad":"100",
+      "precio":16900,
+      "descripcion":"",
+      "img":"../../../assets/productos/img06.png"
+    },
+    {
+      "id":7,
+      "nombre":"Kit De Distribucion Bosch Vw Gol Polo Saveiro 1.9",
+      "cantidad":"5",
+      "precio":39900,
+      "descripcion":"",
+      "img":"../../../assets/productos/img07.png"
+    },
+    {
+      "id":8,
+      "nombre":"Filtro De Aire Peugeot 206 306 Citroen Picasso 1.4 1.6 2.0hd",
+      "cantidad":"10",
+      "precio":13500,
+      "descripcion":"",
+      "img":"../../../assets/productos/img08.png"
+    }
+
   ]
   
 }
