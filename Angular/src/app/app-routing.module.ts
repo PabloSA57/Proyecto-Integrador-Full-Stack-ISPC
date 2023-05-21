@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'carrito', component: CarritoComponent},
   {path: 'productos', component: ProductosComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
-  {path: 'articulo', component: ArticuloComponent}
+  {path: 'articulo/:id', component: ArticuloComponent}
 ];
 
 @NgModule({
