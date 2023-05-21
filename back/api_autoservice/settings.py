@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'reserva',
     'servicio',
     'vehiculo',
-    'pago_reserva'
 ]
 
 MIDDLEWARE = [
