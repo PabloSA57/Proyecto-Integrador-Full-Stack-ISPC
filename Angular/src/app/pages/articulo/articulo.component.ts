@@ -9,20 +9,29 @@ import { ProductoService } from 'src/app/service/producto.service';
 })
 export class ArticuloComponent implements OnInit {
   productos: any={};
+  catSelec: any={};
 
   
-  constructor(private miProductos: ProductoService, private activatedRouter: ActivatedRoute, private router: Router){}
-
-  ngOnInit(): void {
+  constructor(private miProductos: ProductoService, private activatedRouter: ActivatedRoute, private router: Router){
     const id = this.activatedRouter.snapshot.params['id'];
+    let datos:any= {};
     this.miProductos.detail(id).subscribe(
       data => {
         this.productos = data;
+        
+        
       }, err => {
         alert("Error al cargar");
         this.router.navigate(['']);
       }
     )
+    
+
+  }
+
+  ngOnInit(): void {
+   
+    
 
   }
 

@@ -15,13 +15,22 @@ export class ProductoService {
     return this.http.get(this.url +"productos");
 
   };
- // public traerUnProd(id:number){
- //   return this.http.get(this.url+"producto/"+id)
-    //.map((res: Response) => res.json());
-
-  //}
+  
   public detail(Id:number): Observable<any>{
     return this.http.get<any>(this.url + 'productos/'+ Id);
-  }
+  };
+
+  public detailCat(Id:number): Observable<any>{
+
+    return this.http.get<any>(this.url + 'productos?idCategoria='+ Id);
+  };
+
+  public traerCategorias():Observable<any>{
+    return this.http.get(this.url +"categorias");
+
+  };
+  public categoria(Id:number): Observable<any>{
+    return this.http.get<any>(this.url + 'categorias/'+ Id);
+  };
 
 }
