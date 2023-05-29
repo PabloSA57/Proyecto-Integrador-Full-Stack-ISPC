@@ -1,94 +1,377 @@
 <main>
-    <!--
-    <section class="presentacion">
-        <img src="../../../assets/pagina/banner.jpg" alt="">
-        <div class="presentacion-text">
-            <h1 style="color:aliceblue"><strong>El Mejor Servicio para tu vehiculo</strong> </h1>
+
+    <div class="row" >
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+            <ul *ngFor="let item of miServi">
+                <li>
+                    <div class="col">
+                        <div class="card">
+                            <img [src]="item.img" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title ">{{item.nombre}}</h5>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false"
+                                            aria-controls="collapse">
+                                            Ver Más
+                                        </button>
+                                    </h2>
+                                    <div id="collapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            {{item.descripcion}}
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar
+                                                turno</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
         </div>
+    </div>
 
-    </section>
--->
 
-    <div class="row">
+</main>
+
+
+
+
+
+
+
+<!--
+<div class="row" *ngFor="let item of miServi">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-                <div class="card h-100">
-                    <img src="../../../assets/pagina/lavadero.jpg" class="card-img-top" alt="...">
+                <div class="card">
+                    <img [src]="item.img" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title ">LAVADO</h5>
-                        <p class="card-text"> Realizamos el lavado completo de tu vehículo</p>
-                        <ul class=" list-group list-group-flush">
-                            <li class="list-group-item">Lavado de motor</li>
-                            <li class="list-group-item">Limpieza integral del interior</li>
-                            <li class="list-group-item">Hidratación de plásticos</li>
-
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn ">Solicitar turno</a>
+                        <h5 class="card-title ">{{item.nombre}}</h5>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{item.descripcion}}
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="col">
-                <div class="card h-100">
+                <div class="card">
                     <img src="../../../assets/pagina/service.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title ">SERVICE</h5>
-                        <p class="card-text">De acuerdo al kilometraje de tu automotor brindamos</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">20 puntos de control gratuito</li>
-                            <li class="list-group-item">Repuestos y mano de obra certificada</li>
-                            <li class="list-group-item">Garantia de 6 meses</li>
-                        </ul>
+                        <h5 class="card-title ">COCHES HÍBRIDOS</h5>
+                       
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    En nuestros talleres nos hemos adaptado a nuestro tiempo, y es
+                                    por ello que también ofrecemos un servicio de reparación y mantenimiento a los
+                                    coches híbridos; no solo a los convencionales.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn">Solicitar turno</a>
-                    </div>
+
                 </div>
             </div>
+
             <div class="col">
-                <div class="card h-100">
+                <div class="card">
                     <img src="../../../assets/pagina/reparacion.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title "> MANTENIMIENTO</h5>
-                        <p class="card-text">Mecánica integral del automotor</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Necesitas un mecánico profesional?</li>
-                            <li class="list-group-item">Reserva un turno para recibir el mejor diagnostico. </li>
-                            <!--
-                                        <li class="list-group-item">Cambio de aceite y filtros todas las marcas</li>
-                                        <li class="list-group-item">Reparacion de tren delantero</li>
-                                    -->
-                        </ul>
+                        <h5 class="card-title "> MANTENIMIENTO INTEGRAL</h5>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Desde cambio de aceites, filtros, pastillas o discos de freno
+                                    hasta distribuciones, correas... Sea cual sea los cuidados de tu vehículo,
+                                    le daremos un servicio completo de calidad
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn">Solicitar turno</a>
-                    </div>
+
                 </div>
             </div>
+
+
+            <div class="col">
+                <div class="card ">
+                    <img src="../../../assets/pagina/diagnosis.JPEG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">DIAGNOSIS</h5>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Para circular con seguridad es fundamental realizar una diagnosis
+                                    al vehículo y verificar que cumple los requisitos mínimos de seguridad.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card ">
+                    <img src="../../../assets/pagina/mecanica.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">MECÁNICA EN GENERAL</h5>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Contamos con el mejor servicio técnico especializado en
+                                    climatización de automotores y calefacción.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card ">
+                    <img src="../../../assets/pagina/neumatico.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">NEUMATICOS</h5>
+
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                    aria-controls="collapseSix">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Contamos con el mejor servicio técnico especializado en
+                                    climatización de automotores y calefacción.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card ">
+                    <img src="../../../assets/pagina/electronica.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">ELECTRÓNICA DEL VEHÍCULO</h5>
+                        <p class="card-text"></p>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                                    aria-controls="collapseSeven">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Contamos con el mejor servicio técnico especializado en
+                                    climatización de automotores y calefacción.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card ">
+                    <img src="../../../assets/pagina/inyeccion.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">INYECIÓN DEL VEHÍCULO</h5>
+
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
+                                    aria-controls="collapseEight">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Contamos con el mejor servicio técnico especializado en
+                                    climatización de automotores y calefacción.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card ">
+                    <img src="../../../assets/pagina/clima.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">CLIMATIZACIÓN</h5>
+
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingNine">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false"
+                                    aria-controls="collapseNine">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Contamos con el mejor servicio técnico especializado en
+                                    climatización de automotores y calefacción.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img class="img-fluid" src="../../../assets/pagina/inyeccion.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">ELECTRICIDAD DEL VEHÍCULO</h5>
+
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button  collapsed" id="ver-mas" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                    Ver Más
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Somos especialistas en el diagnóstico de las averías eléctricas y
+                                    nuestro objetivo es ofrecer la máxima garantía en todas nuestras reparaciones.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://web.whatsapp.com/" target="_blank" class="btn ">Solicitar turno</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </div>
- </main>
-    <!-- 
-   
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../../../assets/pagina/bannerPrincipal.jpg" class="d-block w-100 h-112" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="../../../assets/pagina/carrusel1.jpg" class="d-block w-100 h-112" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="../../../assets/pagina/carrusel2.jpeg" class="d-block w-100 h-112" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
+    </div> -->

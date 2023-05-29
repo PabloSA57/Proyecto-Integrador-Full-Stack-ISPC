@@ -1,1 +1,77 @@
-<p>registrarse works!</p>
+<section class="con-form">
+  <form
+    class="col-md-5 needs-validation shadow p-3 d-flex flex-column gap-3"
+    novalidate
+  >
+    <h2>Registro</h2>
+    <div class="col-12">
+      <label for="validationName" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nombre"
+        id="validationNombre"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
+
+      <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationCustom02" class="form-label">Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationApellido"
+        name="apellido"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
+
+      <div class="invalid-feedback" id="invalid-apellido"></div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationEmail" class="form-label">Correo</label>
+      <input
+        type="email"
+        class="form-control"
+        id="validationEmail"
+        aria-describedby="inputGroupPrepend"
+        placeholder="juanperez@gmail.com"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
+
+      <div class="invalid-feedback">Please choose a email.</div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationPassword" class="form-label">Contraseña</label>
+      <input
+        type="password"
+        class="form-control"
+        id="validationPassword"
+        aria-describedby="inputGroupPrepend"
+        required
+      />
+      <div id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters, numbers one
+        special characters,, and must not contain spaces, or emoji.
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+
+      <div class="invalid-feedback">Please choose a password.</div>
+    </div>
+
+    <div class="col-12">
+      <button class="col-12 btn btn-primary" type="submit">Registrar</button>
+    </div>
+
+    <div class="col-12">
+      <p>Ya tienes una cuenta? <a routerLink="/login">Ingresa</a></p>
+    </div>
+  </form>
+</section>
+s

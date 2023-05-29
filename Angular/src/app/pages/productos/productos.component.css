@@ -1,0 +1,8 @@
+.categorias{
+    display: flex;
+    justify-content:right;
+}
+.card-footer{
+    align-items: center;
+    justify-content: center;
+}

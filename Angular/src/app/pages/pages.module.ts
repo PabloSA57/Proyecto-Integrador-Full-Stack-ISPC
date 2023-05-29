@@ -13,6 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PreguntasFrecuentesComponent } from './preguntas-frecuentes/preguntas-frecuentes.component';
 import { CardProductComponent } from './carrito/components/card-product/card-product.component';
+import { LayoutModule } from '../layout/layout.module';
+import { ProductosComponent } from './productos/productos.component';
+import { ArticuloComponent } from './articulo/articulo.component';
 
 
 
@@ -29,11 +32,14 @@ import { CardProductComponent } from './carrito/components/card-product/card-pro
     LoginComponent,
     CarritoComponent,
     PreguntasFrecuentesComponent,
-    CardProductComponent
+    CardProductComponent,
+    ProductosComponent,
+    ArticuloComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    LayoutModule
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, CarritoComponent]
 })

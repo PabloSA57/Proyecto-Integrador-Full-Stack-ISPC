@@ -1,3 +1,8 @@
+/* ayuda a que el footer se mantenga abajo */
+html, body {
+  height: 100%;
+}
+
 header.fondo {
     padding-top: 12rem;
     padding-bottom: 6rem;
@@ -21,5 +26,12 @@ header.fondo {
     margin: 0;
     padding: 0;
   }
+
+  main {
+    min-height: 90vh;
+  }
+
+  
+  
 
   
