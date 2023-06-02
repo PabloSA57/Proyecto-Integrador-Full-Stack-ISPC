@@ -6,7 +6,7 @@ import { PagesModule } from './pages/pages.module';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
     PagesModule,
     LayoutModule,
     HttpClientModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

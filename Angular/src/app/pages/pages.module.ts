@@ -18,6 +18,7 @@ import { CardProductComponent } from './carrito/components/card-product/card-pro
 import { LayoutModule } from '../layout/layout.module';
 import { ProductosComponent } from './productos/productos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
+import { ServicioComponent } from './servicio/servicio.component';
 
 
 
@@ -36,7 +37,8 @@ import { ArticuloComponent } from './articulo/articulo.component';
     PreguntasFrecuentesComponent,
     CardProductComponent,
     ProductosComponent,
-    ArticuloComponent
+    ArticuloComponent,
+    ServicioComponent
   ],
   imports: [
     CommonModule,
@@ -45,6 +47,8 @@ import { ArticuloComponent } from './articulo/articulo.component';
     ReactiveFormsModule,
     // FormsModule
   ],
-  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, CarritoComponent]
+  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
+    SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
+    CarritoComponent,ServicioComponent]
 })
 export class PagesModule { }

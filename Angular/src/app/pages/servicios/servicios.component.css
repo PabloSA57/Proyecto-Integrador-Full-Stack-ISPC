@@ -5,6 +5,10 @@
     ---color-background: #efefef;
 }
 
+h1{
+    text-align: center;
+}
+
 h5 {
     color: #efefef;
     font-size: 1em;
@@ -40,6 +44,10 @@ h5 {
 
 .row ul li{
     list-style: none;
+}
+
+.btn:hover{
+    color: #060818;
 }
 
 
