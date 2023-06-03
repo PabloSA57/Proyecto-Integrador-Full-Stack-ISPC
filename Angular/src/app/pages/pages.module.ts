@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -39,7 +41,10 @@ import { ArticuloComponent } from './articulo/articulo.component';
   imports: [
     CommonModule,
     RouterModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, CarritoComponent]
 })

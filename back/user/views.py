@@ -23,12 +23,12 @@ def login(request):
     email = request.data.get("email", None)
     password = request.data.get("password", None)
     user = authenticate(email=email, password=password)
-
-    token = get_tokens_for_user(user)
+    print(user)
     if user:
+        token = get_tokens_for_user(user)
 
         return Response(data={"access_token": token.get('access'), "refresh_token": token.get("refresh")}, status=status.HTTP_200_OK)
-    return Response(status=status.HTTP_404_NOT_FOUND)
+    return Response(data={"message": "No se encontro ningun usuario"}, status=status.HTTP_404_NOT_FOUND)
 
 
 @api_view(['POST'])
