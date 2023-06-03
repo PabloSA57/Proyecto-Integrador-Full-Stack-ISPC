@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { ServicioService } from 'src/app/service/servicio.service';
 
 @Component({
@@ -9,12 +11,14 @@ import { ServicioService } from 'src/app/service/servicio.service';
 export class ServiciosComponent implements OnInit {
   
   miServi:any;
-  //hoy = new Date();
-  //mostrarServicios:boolean=true;
-  //servicios:any;
 
-  constructor(private serv: ServicioService) {
- 
+
+
+  constructor(private serv: ServicioService, private activatedRouter: ActivatedRoute, private router: Router) {
+    
+   }
+
+  ngOnInit(): void {
     this.serv.obtenerServicios().subscribe({
       next:(serviciosTodos)=>{
         this.miServi=serviciosTodos;
@@ -23,18 +27,15 @@ export class ServiciosComponent implements OnInit {
       error:(errorData)=> {
         console.log("error del componenete servicio ");
         console.error(errorData);
+        this.router.navigate(['']);
       }
-    });
+    })
   
-    
-   }
 
-  ngOnInit(): void {
-  //   this.serv.obtenerServicios().subscribe(data=>{
-  //     // console.log(data);
-  //     this.miServi=data;
-  //     console.log(this.miServi);
-  //   });
+   
+
+
   }
+  
 
 }
