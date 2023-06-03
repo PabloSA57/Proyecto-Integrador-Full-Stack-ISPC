@@ -1,12 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-<<<<<<< HEAD
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-
-=======
-// import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
->>>>>>> 2ebd758155c79467f9e79f88bfeef91108d065b5
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -49,14 +43,8 @@ import { ServicioComponent } from './servicio/servicio.component';
     CommonModule,
     RouterModule,
     LayoutModule,
-<<<<<<< HEAD
     FormsModule,
     ReactiveFormsModule
-    
-=======
-    ReactiveFormsModule,
-    // FormsModule
->>>>>>> 2ebd758155c79467f9e79f88bfeef91108d065b5
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
     SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
