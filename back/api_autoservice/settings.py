@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'reserva',
     'servicio',
     'vehiculo',
+    'rest_framework',
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
