@@ -101,10 +101,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'autoservice',
-        'USER': 'root',
-        'PASSWORD': '13853211ps',
+        'USER': 'admin',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3305',
+        'PORT': '3306',
     }
 }
 
