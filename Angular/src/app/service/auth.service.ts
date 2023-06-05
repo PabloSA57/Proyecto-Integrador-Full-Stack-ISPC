@@ -25,4 +25,13 @@ export class AuthService {
       })
     )
   }
+
+  register(first_name: string, last_name: string,email: string, password: string) {
+    return this.http.post(`${this.apiUrl}/registro/`, {
+      first_name,
+      last_name,
+      email,
+      password
+    })
+  }
 }

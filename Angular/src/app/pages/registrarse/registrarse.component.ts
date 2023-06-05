@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
+import { RequestStatus } from 'src/app/models/statusrequest';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-registrarse',
@@ -9,11 +12,15 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 export class RegistrarseComponent implements OnInit {
   
   registrar!:FormGroup;
-
+  status: RequestStatus = 'init'
   ngOnInit(): void {
   }
 
-  constructor(private fb:FormBuilder){
+  constructor(
+    private fb:FormBuilder,
+    private authService: AuthService,
+    private router: Router
+    ){
     this.crearRegistro();
   }
 
@@ -52,8 +59,6 @@ export class RegistrarseComponent implements OnInit {
   }
 
    guardar(){
-    console.log(this.registrar);
-
     this.passNoValido();
 
     if (this.registrar.invalid){
@@ -61,6 +66,24 @@ export class RegistrarseComponent implements OnInit {
         control.markAllAsTouched();
       })
     }
+
+    this.status = 'loading'
+    const {nombre, apellido, correo, password1} = this.registrar.getRawValue()
+    this.authService.register(nombre, apellido, correo, password1)
+    .subscribe({
+      next: () => {
+        this.status = 'success'
+        this.router.navigate(['/login'])
+      }, 
+      error: (e) => {
+        this.status = 'failed'
+        setTimeout(() => {
+          this.status = 'init'
+        }, 2000)
+        console.log('error')
+      }
+    })
+
   }
 
   passwordIguales(pass1Name:string,pass2Name:string){
