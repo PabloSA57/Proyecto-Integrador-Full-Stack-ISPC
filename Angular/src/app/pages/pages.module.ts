@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -16,6 +17,7 @@ import { CardProductComponent } from './carrito/components/card-product/card-pro
 import { LayoutModule } from '../layout/layout.module';
 import { ProductosComponent } from './productos/productos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
+import { ServicioComponent } from './servicio/servicio.component';
 
 
 
@@ -34,13 +36,18 @@ import { ArticuloComponent } from './articulo/articulo.component';
     PreguntasFrecuentesComponent,
     CardProductComponent,
     ProductosComponent,
-    ArticuloComponent
+    ArticuloComponent,
+    ServicioComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, CarritoComponent]
+  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
+    SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
+    CarritoComponent,ServicioComponent]
 })
 export class PagesModule { }

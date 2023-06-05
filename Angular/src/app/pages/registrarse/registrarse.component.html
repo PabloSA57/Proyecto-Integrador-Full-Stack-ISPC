@@ -1,7 +1,8 @@
-<section class="con-form">
+<section class="w-100 vh-100 d-flex align-items-center bg-color">
   <form
-    class="col-md-5 needs-validation shadow p-3 d-flex flex-column gap-3"
-    novalidate
+    class="col shadow p-3 d-flex flex-column gap-3 bg-white"
+    [formGroup]="registrar"
+    (ngSubmit)="guardar()"
   >
     <h2>Registro</h2>
     <div class="col-12">
@@ -9,13 +10,16 @@
       <input
         type="text"
         class="form-control"
+        placeholder="Juan"
         name="nombre"
         id="validationNombre"
         required
+        formControlName="nombre"
+        [class.is-invalid]="nombreNoValido"
       />
-      <div class="valid-feedback">Looks good!</div>
-
-      <div class="invalid-feedback"></div>
+      <small *ngIf="nombreNoValido" class="text-danger"
+        >El nombre es un campo requerido</small
+      >
     </div>
 
     <div class="col-12">
@@ -24,12 +28,15 @@
         type="text"
         class="form-control"
         id="validationApellido"
+        placeholder="Pérez"
         name="apellido"
+        formControlName="apellido"
         required
+        [class.is-invalid]="apellidoNoValido"
       />
-      <div class="valid-feedback">Looks good!</div>
-
-      <div class="invalid-feedback" id="invalid-apellido"></div>
+      <small *ngIf="apellidoNoValido" class="text-danger"
+        >El apellido es un campo requerido</small
+      >
     </div>
 
     <div class="col-12">
@@ -40,11 +47,13 @@
         id="validationEmail"
         aria-describedby="inputGroupPrepend"
         placeholder="juanperez@gmail.com"
+        formControlName="correo"
         required
+        [class.is-invalid]="correoNoValido"
       />
-      <div class="valid-feedback">Looks good!</div>
-
-      <div class="invalid-feedback">Please choose a email.</div>
+      <small *ngIf="correoNoValido" class="text-danger"
+        >Ingrese un correo valido</small
+      >
     </div>
 
     <div class="col-12">
@@ -54,19 +63,47 @@
         class="form-control"
         id="validationPassword"
         aria-describedby="inputGroupPrepend"
+        formControlName="password1"
         required
+        [class.is-invalid]="password1NoValido"
       />
-      <div id="passwordHelpBlock" class="form-text">
-        Your password must be 8-20 characters long, contain letters, numbers one
-        special characters,, and must not contain spaces, or emoji.
-      </div>
-      <div class="valid-feedback">Looks good!</div>
-
-      <div class="invalid-feedback">Please choose a password.</div>
+      <small *ngIf="password1NoValido" class="text-danger"
+        >Ingrese una contraseña con el minimo de 6 caracteres</small
+      >
     </div>
 
     <div class="col-12">
-      <button class="col-12 btn btn-primary" type="submit">Registrar</button>
+      <label for="validationPassword" class="form-label"
+        >Confirmar Contraseña</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="validationPassword"
+        aria-describedby="inputGroupPrepend"
+        formControlName="password2"
+        required
+        [class.is-invalid]="password2NoValido"
+      />
+      <small *ngIf="password2NoValido" class="text-danger"
+        >Las contraseñas no coinciden</small
+      >
+    </div>
+    <div *ngIf="status === 'failed'" class="alert alert-danger" role="alert">
+      Este usuario ya esta registrado
+    </div>
+    <div class="col-12">
+      <button class="col-12 btn btn-primary" type="submit">
+        <div
+          *ngIf="status === 'loading'"
+          class="spinner-border"
+          role="status"
+          style="height: 20px; width: 20px"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        Registrar
+      </button>
     </div>
 
     <div class="col-12">
@@ -74,4 +111,3 @@
     </div>
   </form>
 </section>
-s

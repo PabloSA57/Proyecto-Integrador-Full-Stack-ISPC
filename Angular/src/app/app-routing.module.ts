@@ -13,10 +13,10 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { ArticuloComponent } from './pages/articulo/articulo.component';
+import { ServicioComponent } from './pages/servicio/servicio.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  // {path: '**', component: Pagina404Component},
   {path: 'servicios', component:ServiciosComponent},
   {path: 'quienes-somos', component:QuienesSomosComponent},
   {path: 'quienes-somos/:id', component: IntegranteComponent},
@@ -29,7 +29,12 @@ const routes: Routes = [
   {path: 'productos/:id', component: ProductosComponent},
   {path: 'productos', component: ProductosComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
-  {path: 'articulo/:id', component: ArticuloComponent}
+  {path: 'articulo/:id', component: ArticuloComponent},
+  {path: 'servicio/:id', component:ServicioComponent},
+
+
+
+  {path: '**', component: Pagina404Component}
 ];
 
 @NgModule({

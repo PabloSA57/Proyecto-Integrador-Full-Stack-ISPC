@@ -1,41 +1,83 @@
-<section class="con-log">
+<section class="w-100 vh-100 d-flex align-items-center bg-color">
   <form
-    class="col-md-5 bg-white needs-validation mx-auto d-flex flex-column gap-4 shadow p-3"
+    class="col-md-5 bg-white needs-validation mx-auto d-flex flex-column gap-3 shadow p-3"
+    [formGroup]="form"
+    (submit)="login($event)"
     novalidate
   >
     <h2>Login</h2>
-
-    <div class="col-12">
+    <div class="col-12 has-validation">
       <label for="validationEmail" class="form-label">Email</label>
       <input
         type="email"
         class="form-control"
+        [class.is-invalid]="email?.invalid && (email?.dirty || email?.touched)"
+        [class.is-valid]="email?.valid && (email?.dirty || email?.touched)"
         id="validationEmail"
         aria-describedby="inputGroupPrepend"
         placeholder="juanperez@gmail.com"
-        required
+        formControlName="email"
       />
-      <div class="valid-feedback">Looks good!</div>
-
-      <div class="invalid-feedback">Please choose a email.</div>
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        <div
+          [ngClass]="{
+            'd-block': email?.hasError('required')
+          }"
+          class="invalid-feedback"
+        >
+          Este campo es requerido
+        </div>
+        <div
+          [ngClass]="{
+            'd-block': email?.hasError('pattern')
+          }"
+          class="invalid-feedback"
+        >
+          Este email no es valido
+        </div>
+      </div>
     </div>
 
     <div class="col-12">
-      <label for="validationPassword" class="form-label">Password</label>
+      <label for="validationPassword" class="form-label">Contraseña</label>
       <input
         type="password"
         class="form-control"
         id="validationPassword"
         aria-describedby="inputGroupPrepend"
-        required
+        formControlName="password"
       />
-      <div class="valid-feedback">Looks good!</div>
-
-      <div class="invalid-feedback">Please choose a password.</div>
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+        <div
+          [ngClass]="{
+            'd-block': password?.hasError('required')
+          }"
+          class="invalid-feedback"
+        >
+          Este campo es requerido
+        </div>
+      </div>
     </div>
-
+    <div *ngIf="status === 'failed'" class="alert alert-danger" role="alert">
+      Las credenciales no son validas
+    </div>
     <div class="col-12">
-      <button class="col-12 btn btn-primary" type="submit">Login</button>
+      <div class="mb-3">
+        <a class="text-primary" routerLink="/registrarse"
+          >Olvidaste tu contraseña?</a
+        >
+      </div>
+      <button class="col-12 btn btn-primary" type="submit">
+        <div
+          *ngIf="status === 'loading'"
+          class="spinner-border"
+          role="status"
+          style="height: 20px; width: 20px"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        Iniciar sesion
+      </button>
     </div>
 
     <div class="col-12">

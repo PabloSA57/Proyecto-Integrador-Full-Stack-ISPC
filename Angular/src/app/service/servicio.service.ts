@@ -17,16 +17,14 @@ export class ServicioService {
     
   }
 
+  public detail(Id:number): Observable<any>{
+    return this.http.get<any>(this.url + 'servicios/'+ Id);
+  };
 
 
 
 
-
-  //  obtenerServicios():Observable<any>
-  //  {
-  //   return this.http.get("./assets/data/nuevo.json");
-  //   //console.log("desde el service");
-  // }
+  
 
 
   

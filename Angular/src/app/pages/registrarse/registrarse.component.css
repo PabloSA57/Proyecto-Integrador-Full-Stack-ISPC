@@ -1,15 +1,22 @@
 form{
     max-width: 500px;
-   
-   
+    margin: 0 auto;
+
 }
 
-.con-form {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border-color: #F5C057;
-    height: 80vh;
+.btn{
+    background-color: #060818;
+    color: #FFFFFF;
 }
 
+.btn:hover{
+    background-color: #F5C057;
+}
+ 
+a{
+    color:  #F5C057;
+}
+
+.bg-color{
+    background-color: #060818;
+}
