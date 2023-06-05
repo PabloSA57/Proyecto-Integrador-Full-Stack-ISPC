@@ -15,7 +15,11 @@ export class AuthService {
   ) { }
 
   login(email: string, password: string) {
+<<<<<<< HEAD
     return this.http.post<Token>(`${this.apiUrl}/login`, {
+=======
+    return this.http.post<Token>(`${this.apiUrl}/login/`, {
+>>>>>>> a4c3d76c9891d49eb57389bc59ce2267b1325bd8
       email,
       password
     })
@@ -24,5 +28,14 @@ export class AuthService {
         this.tokenService.createToken(resp.access_token)
       })
     )
+  }
+
+  register(first_name: string, last_name: string,email: string, password: string) {
+    return this.http.post(`${this.apiUrl}/registro/`, {
+      first_name,
+      last_name,
+      email,
+      password
+    })
   }
 }
