@@ -15,11 +15,11 @@ export class AuthService {
   ) { }
 
   login(email: string, password: string) {
-<<<<<<< HEAD
+
     return this.http.post<Token>(`${this.apiUrl}/login`, {
-=======
-    return this.http.post<Token>(`${this.apiUrl}/login/`, {
->>>>>>> a4c3d76c9891d49eb57389bc59ce2267b1325bd8
+
+  
+
       email,
       password
     })

@@ -50,5 +50,9 @@ h5 {
     color: #060818;
 }
 
-
+#list{
+     float: right;
+     margin-right: 30px;
+     margin-bottom: 15px;
+}
     /*box-shadow:5px 5px 10px #565656, -5px -5px 10px #8a8a8a;*/

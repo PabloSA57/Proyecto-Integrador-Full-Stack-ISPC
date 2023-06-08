@@ -18,6 +18,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { ProductosComponent } from './productos/productos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ServicioComponent } from './servicio/servicio.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 
 
 
@@ -37,7 +38,8 @@ import { ServicioComponent } from './servicio/servicio.component';
     CardProductComponent,
     ProductosComponent,
     ArticuloComponent,
-    ServicioComponent
+    ServicioComponent,
+    ListaServiciosComponent
   ],
   imports: [
     CommonModule,
@@ -48,6 +50,6 @@ import { ServicioComponent } from './servicio/servicio.component';
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
     SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
-    CarritoComponent,ServicioComponent]
+    CarritoComponent,ServicioComponent,ListaServiciosComponent]
 })
 export class PagesModule { }

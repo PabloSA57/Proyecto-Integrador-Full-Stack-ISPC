@@ -17,10 +17,10 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nombre', models.CharField(max_length=255)),
-                ('imagen', models.ImageField(upload_to='photos/%Y/%m/')),
+                ('imagen', models.ImageField(upload_to='photos/')),
                 ('descripcion', models.TextField()),
-                ('precio', models.DecimalField(decimal_places=2, max_digits=6)),
-                ('date_created', models.DateTimeField(default=datetime.datetime.now)),
+                ('precio', models.DecimalField(decimal_places=3, max_digits=6)),
+                ('fecha_creacion', models.DateTimeField(default=datetime.datetime.now)),
             ],
             options={
                 'verbose_name': 'servicio',
