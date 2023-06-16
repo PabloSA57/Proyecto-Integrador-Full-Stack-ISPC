@@ -19,6 +19,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ServicioComponent } from './servicio/servicio.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
+import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios.component';
 
 
 
@@ -39,7 +40,8 @@ import { ListaServiciosComponent } from './lista-servicios/lista-servicios.compo
     ProductosComponent,
     ArticuloComponent,
     ServicioComponent,
-    ListaServiciosComponent
+    ListaServiciosComponent,
+    AgregarServiciosComponent
   ],
   imports: [
     CommonModule,
@@ -50,6 +52,6 @@ import { ListaServiciosComponent } from './lista-servicios/lista-servicios.compo
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
     SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
-    CarritoComponent,ServicioComponent,ListaServiciosComponent]
+    CarritoComponent,ServicioComponent,ListaServiciosComponent,AgregarServiciosComponent]
 })
 export class PagesModule { }
