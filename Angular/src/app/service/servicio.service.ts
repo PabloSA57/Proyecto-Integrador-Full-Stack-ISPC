@@ -1,16 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
+import { Servicio } from '../models/servicio';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicioService {
-//  url:string="http://localhost:3000/";
+// url2:string="http://localhost:8000/photos/photos/";
 url:string="http://localhost:8000/api/"
 
  constructor(private http:HttpClient) { }
+
+ ngOnInit(){}
 
 //servicios
  obtenerServicios():Observable<any>{
@@ -26,7 +29,9 @@ url:string="http://localhost:8000/api/"
 
 //alta de un servicio
 public create(data:any):Observable<any>{
-  return this.http.post(this.url,data);
+  let  servicio =new Servicio(data.nombre,data.descripcion,data.precio,data.fecha_creacion,'photos/'+data.imagen);
+  
+  return this.http.post(this.url+'servicio/',servicio);
 } 
 
 //actualizar servicio
@@ -35,8 +40,8 @@ public update(id:any,data:any): Observable<any>{
 }
 
 //eliminar servicio
-public delete(id:any):Observable<any>{
-  return this.http.delete(`${this.url}${id}`);
+public delete(id:number):Observable<any>{
+  return this.http.delete<Servicio>(this.url+'servicio/delete/'+id+'/');
 }
 
 

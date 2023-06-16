@@ -15,8 +15,12 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { ArticuloComponent } from './pages/articulo/articulo.component';
 import { ServicioComponent } from './pages/servicio/servicio.component';
 import { ListaServiciosComponent } from './pages/lista-servicios/lista-servicios.component';
+
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { ListaProductosComponent } from './pages/lista-productos/lista-productos.component'
+
+import { AgregarServiciosComponent } from './pages/agregar-servicios/agregar-servicios.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -35,9 +39,13 @@ const routes: Routes = [
   {path: 'articulo/:id', component: ArticuloComponent},
   {path: 'servicio/:id', component:ServicioComponent},
   {path: 'lista-servicios',component:ListaServiciosComponent},
+
   {path: 'categorias', component: CategoriasComponent},
   {path: 'lista-productos',component:ListaProductosComponent},
 
+
+
+  {path: 'agregar-servicios',component:AgregarServiciosComponent},
 
 
 

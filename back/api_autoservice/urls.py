@@ -18,13 +18,24 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from servicio.models import Servicio
+from servicio.serializer import ServicioSerializer
+from servicio import views
+from servicio.views import ServicioUpdateDelete, servicioList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('user.urls')),
-    path('api/', include('servicio.urls')),
     path('api/', include('producto.urls')),
+<<<<<<< HEAD
     path('api/', include('categoria.urls')),
+=======
+
+
+    path('api/', include('servicio.urls')),
+    path('api/servicio/servicioList/',views.servicioList),
+    path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
+>>>>>>> 1b98cc30b79509b16f9fa6a96021fc80281867c1
 ]
 
 # para que cargue la foto
