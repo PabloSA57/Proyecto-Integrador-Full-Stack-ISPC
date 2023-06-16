@@ -19,7 +19,12 @@ import { ProductosComponent } from './productos/productos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ServicioComponent } from './servicio/servicio.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
+
+import { CategoriasComponent } from './categorias/categorias.component';
+import { ListaProductosComponent } from './lista-productos/lista-productos.component';
+
 import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios.component';
+
 
 
 
@@ -41,7 +46,13 @@ import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios
     ArticuloComponent,
     ServicioComponent,
     ListaServiciosComponent,
+
+    CategoriasComponent,
+    ListaProductosComponent,
+
+
     AgregarServiciosComponent
+
   ],
   imports: [
     CommonModule,
@@ -52,6 +63,9 @@ import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
     SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
-    CarritoComponent,ServicioComponent,ListaServiciosComponent,AgregarServiciosComponent]
+
+    CarritoComponent,ServicioComponent,ListaServiciosComponent, CategoriasComponent, ListaProductosComponent,AgregarServiciosComponent]
+
+   
 })
 export class PagesModule { }
