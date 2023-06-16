@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/', include('user.urls')),
     path('api/', include('servicio.urls')),
     path('api/', include('producto.urls')),
+    path('api/', include('categoria.urls')),
 ]
 
 # para que cargue la foto
