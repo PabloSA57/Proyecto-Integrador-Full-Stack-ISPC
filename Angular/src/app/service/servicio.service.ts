@@ -29,9 +29,9 @@ url:string="http://localhost:8000/api/"
 
 //alta de un servicio
 public create(data:any):Observable<any>{
-  let  servicio =new Servicio(data.nombre,data.descripcion,data.precio,data.fecha_creacion,'photos/'+data.imagen);
+  let  servicio =new Servicio(data.nombre,data.descripcion,data.precio,data.fecha_creacion,data.imagen);
   
-  return this.http.post(this.url+'servicio/',servicio);
+  return this.http.post(this.url+'servicio/',data);
 } 
 
 //actualizar servicio

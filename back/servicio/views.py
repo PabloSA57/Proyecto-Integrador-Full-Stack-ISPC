@@ -8,6 +8,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -22,7 +23,7 @@ class ServicioUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
     serializer_class=ServicioSerializer
 
 
-@csrf_exempt   #trae y crea servicios
+@csrf_exempt   #1
 @api_view(['GET', 'POST'])
 def servicioList(request, format=None):
     '''
@@ -32,21 +33,21 @@ def servicioList(request, format=None):
     if request.method == 'GET':
         servicio = Servicio.objects.all()
         serializer = ServicioSerializer(servicio, many=True)
-       
+        # return JsonResponse(serializer.data, safe=False)
         return Response(serializer.data)
 
-    elif request.method == 'POST' and request.FILES['imagen']:
-        imagen=request.FILES['imagen']
-        fs=FileSystemStorage()
-        fileName=fs.save(imagen.name, imagen)
-        photos=fs.url(fileName)
-    
-        print('desde create'+photos)
+
+    elif request.method == 'POST':
+        
+        # data = JSONParser().parse(request)    
+        # data.imagen=request.FILES.get('imagen')
+        # serializer = SnippetSerializer(data=data)     #1
+      
         serializer = ServicioSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            print('desde create'+serializer)
-           
+         
+            # return JsonResponse(serializer.data, status=201)  #1
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-  
+        # return JsonResponse(serializer.errors, status=400)    #1
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

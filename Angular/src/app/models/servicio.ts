@@ -3,10 +3,10 @@ export class Servicio {
     nombre?: string;
     imagen?: string;
     descripcion?: string;
-    precio?: number;
+    precio: string;
     fecha_creacion?: string;
     
-    constructor(nombre:string,descripcion:string,precio:number,fecha_creacion:string,imagen:string){
+    constructor(nombre:string,descripcion:string,precio:string,fecha_creacion:string,imagen:string){
 
         this.nombre=nombre;
         this.imagen=imagen;
