@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServicioService } from 'src/app/service/servicio.service';
 import { Servicio } from 'src/app/models/servicio';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-agregar-servicios',
@@ -20,7 +20,7 @@ export class AgregarServiciosComponent {
   precio: string = "";
   fecha_creacion: string = "";
 
-  constructor(private servicioServicio: ServicioService, private router: Router, private http: HttpClient) {
+  constructor(private servicioServicio: ServicioService, private router: Router) {
 
   }
 
@@ -54,7 +54,7 @@ export class AgregarServiciosComponent {
     servicio.append('descripcion', this.descripcion);
     servicio.append('precio', this.precio);
     servicio.append('fecha_creacion', this.fecha_creacion);
-    servicio.append('imagen', this.imagen,this.imagen.name);      
+    servicio.append('imagen', this.imagen,this.imagen!.name);      
     this.servicioServicio.create(servicio).subscribe(
       servicio => this.router.navigate(['/lista-servicios'])
      
@@ -62,7 +62,7 @@ export class AgregarServiciosComponent {
       error => console.log(error)
 
     );
-
+    console.log(this.imagen.name);
 
   }
 

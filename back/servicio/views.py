@@ -23,8 +23,8 @@ class ServicioUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
     serializer_class=ServicioSerializer
 
 
-@csrf_exempt   #1
-@api_view(['GET', 'POST'])
+@csrf_exempt   #
+@api_view(['GET', 'POST','PUT','DELETE'])
 def servicioList(request, format=None):
     '''
     List all code snippets, or create a new snippet.
@@ -46,8 +46,19 @@ def servicioList(request, format=None):
         serializer = ServicioSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-         
-            # return JsonResponse(serializer.data, status=201)  #1
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # return JsonResponse(serializer.errors, status=400)    #1
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+  
+    elif request.method == 'PUT':
+       
+        serializer = ServicioSerializer(servicio, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+  
+    elif request.method == 'DELETE':
+        servicio.delete()
+        # return HttpResponse(status=204)    #1
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

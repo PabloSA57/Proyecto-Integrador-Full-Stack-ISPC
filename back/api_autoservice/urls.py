@@ -29,13 +29,9 @@ router.register(r'servicio',views.ServicioViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('user.urls')),
-    # path('api/', include('producto.urls')),
-
-
-    path('api/', include('servicio.urls')),
-    path('api/servicio/<servicio>/',views.servicioList),
-    path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
-   
+    path('api/servicio/', include('servicio.urls')),
+    path('api/', include('producto.urls')),
+  
 ]
 
 # para que cargue la foto

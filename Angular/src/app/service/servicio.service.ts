@@ -9,7 +9,7 @@ import { Servicio } from '../models/servicio';
 })
 export class ServicioService {
 // url2:string="http://localhost:8000/photos/photos/";
-url:string="http://localhost:8000/api/"
+url:string="http://localhost:8000/api/servicio/"
 
  constructor(private http:HttpClient) { }
 
@@ -17,7 +17,7 @@ url:string="http://localhost:8000/api/"
 
 //servicios
  obtenerServicios():Observable<any>{
-    return this.http.get(this.url+"servicio");
+    return this.http.get(this.url+"servicio/");
     
   }
 
@@ -29,19 +29,17 @@ url:string="http://localhost:8000/api/"
 
 //alta de un servicio
 public create(data:any):Observable<any>{
-  let  servicio =new Servicio(data.nombre,data.descripcion,data.precio,data.fecha_creacion,data.imagen);
-  
   return this.http.post(this.url+'servicio/',data);
 } 
 
 //actualizar servicio
 public update(id:any,data:any): Observable<any>{
-  return this.http.put(`${this.url}/${id}`,data);
+  return this.http.put(`${this.url}/${id}`,data+'/');
 }
 
 //eliminar servicio
 public delete(id:number):Observable<any>{
-  return this.http.delete<Servicio>(this.url+'servicio/delete/'+id+'/');
+  return this.http.delete<Servicio>(this.url+'servicio/'+id+'/');
 }
 
 
