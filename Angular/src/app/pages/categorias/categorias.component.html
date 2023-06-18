@@ -1,7 +1,7 @@
 
     <h4>Categorías</h4>
     
-<a href="/editar-categoria" class="btn btn-info">Agregar Categoria</a>
+<a href="/agregar-categorias" class="btn btn-info">Agregar Categoria</a>
 
 <table class="table">
     <thead>
@@ -19,7 +19,7 @@
         <td>{{item.nombre}}</td>
         
         <td><a href=""><i class="bi bi-pencil-fill" id="edit"></i></a></td>
-        <td><a href=""><i class="bi bi-trash-fill" id="borrar"></i></a></td>
+        <td><button (click)=delete(item) class="bi bi-pencil-fill"></button></td>
         
         
         

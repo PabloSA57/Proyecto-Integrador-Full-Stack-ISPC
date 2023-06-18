@@ -20,7 +20,9 @@ export class AgregarCategoriasComponent {
   ngOnInit(): void { }
 
   create(): void{
-    const categoria = new Categoria(this.nombre);
+    // const categoria = new Categoria(this.nombre);
+    const categoria = new FormData();
+    categoria.append('nombre',this.nombre)
     this.categoriaServicio.create(categoria).subscribe(
       data=>this.router.navigate(['/categorias'])
     );

@@ -22,20 +22,25 @@ from servicio.models import Servicio
 from servicio.serializer import ServicioSerializer
 from servicio import views
 from servicio.views import ServicioUpdateDelete, servicioList
+from categoria.views import CategoriaUpdateDelete, categoriaList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('user.urls')),
     path('api/', include('producto.urls')),
-<<<<<<< HEAD
-    path('api/', include('categoria.urls')),
-=======
+
+    
+
 
 
     path('api/', include('servicio.urls')),
     path('api/servicio/servicioList/',views.servicioList),
     path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
->>>>>>> 1b98cc30b79509b16f9fa6a96021fc80281867c1
+
+    path('api/', include('categoria.urls')),
+    
+    path('api/categoria/<pk>/', categoriaList),
+    path('api/categoria/', categoriaList),
 ]
 
 # para que cargue la foto
