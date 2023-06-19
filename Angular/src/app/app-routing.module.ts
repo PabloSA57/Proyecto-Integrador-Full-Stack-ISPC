@@ -24,17 +24,19 @@ import { AgregarCategoriasComponent } from './pages/agregar-categorias/agregar-c
 import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
 import { EditarCategoriasComponent } from './pages/editar-categorias/editar-categorias.component';
 
+import { AuthRedirectGuard } from './guards/auth-redirect.guard';
+import { AuthClientGuard } from './guards/auth-client.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'servicios', component:ServiciosComponent},
   {path: 'quienes-somos', component:QuienesSomosComponent},
   {path: 'quienes-somos/:id', component: IntegranteComponent},
-  {path: 'home', component:DashboardComponent},
+  {path: 'home', canActivate:[AuthClientGuard] ,component:DashboardComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'sucursales', component: SucursalesComponent},
   {path: 'registrarse', component: RegistrarseComponent},
-  {path: 'login', component: LoginComponent}, 
+  {path: 'login',canActivate: [AuthRedirectGuard], component: LoginComponent}, 
   {path: 'carrito', component: CarritoComponent},
   {path: 'productos/:id', component: ProductosComponent},
   {path: 'productos', component: ProductosComponent},
