@@ -1,0 +1,55 @@
+<h4>Cargar Producto</h4>
+
+<form method="post" (ngSubmit)="create()" class="col-6" enctype="multipart/form-data" >
+    
+<div class="mb-3" ngForm="form">
+    <label  class="form-label">Nombre del Producto</label>
+    <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre">
+  </div>
+
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Imagen</label>
+    <input class="form-control" type="file" name="imagen" id="imagen"  [(ngModel)]="imagen">
+  </div>
+
+  <div class="mb-3">
+    <label  class="form-label">Descripción</label>
+    <textarea class="form-control"  rows="3" name="descripcion" [(ngModel)]="descripcion"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label  class="form-label">Precio</label>
+    <input type="number" class="form-control" name="precio" [(ngModel)]="precio">
+  </div>
+
+  <div class="mb-3">
+    <label  class="form-label">Cantidad</label>
+    <input type="number" class="form-control" name="cantidad" [(ngModel)]="cantidad">
+  </div>
+
+  <div class="mb-3">
+    <label  class="form-label">Fecha de Creación</label>
+    <input type="date" class="form-control" name="fecha_creacion" [(ngModel)]="fecha_creacion">
+  </div>
+
+  <div class="mb-3">
+    <label  class="form-label">Categoría</label>
+    <input type="" class="form-control" name="categoria" [(ngModel)]="categoria">
+  </div>
+
+  <!-- <div class="categorias" >
+
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Categorias 
+    </a>
+    <ul class="dropdown-menu">
+      <li ><a class="dropdown-item" href="/productos">Todas</a></li>
+      <li *ngFor="let cat of categorias"><a class="dropdown-item" href="/productos/{{cat.id}}">{{cat.nombre}}</a></li>
+      
+    </ul>
+  
+</div> -->
+
+  <button class="btn">Cargar Producto</button>
+
+</form>

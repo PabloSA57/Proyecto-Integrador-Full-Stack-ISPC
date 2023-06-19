@@ -21,17 +21,40 @@ from django.conf.urls.static import static
 from servicio.models import Servicio
 from servicio.serializer import ServicioSerializer
 from servicio import views
+
+from servicio.views import ServicioUpdateDelete, servicioList
+from categoria.views import CategoriaUpdateDelete, categoriaList
+
 from servicio.views import ServicioUpdateDelete,servicioList
 from rest_framework import routers
 router=routers.DefaultRouter()
 router.register(r'servicio',views.ServicioViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('user.urls')),
     path('api/servicio/', include('servicio.urls')),
     path('api/', include('producto.urls')),
+
+
+    
+
+
+
+    path('api/', include('servicio.urls')),
+    path('api/servicio/servicioList/',views.servicioList),
+    path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
+
+    path('api/', include('categoria.urls')),
+    
+    path('api/categoria/<pk>/', categoriaList),
+    path('api/categoria/update/<pk>/', categoriaList),
+    path('api/categoria/', categoriaList),
+    path('api/categoria/detail/<pk>/', categoriaList)
+
   
+
 ]
 
 # para que cargue la foto
