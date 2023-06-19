@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -24,6 +24,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 
 import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios.component';
+import { EditarServiciosComponent } from './editar-servicios/editar-servicios.component';
 
 
 
@@ -51,7 +52,8 @@ import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios
     ListaProductosComponent,
 
 
-    AgregarServiciosComponent
+    AgregarServiciosComponent,
+    EditarServiciosComponent
 
   ],
   imports: [
@@ -61,11 +63,10 @@ import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
-    SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
+  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent,
+    SucursalesComponent, ContactoComponent, RegistrarseComponent, LoginComponent,
+    CarritoComponent, ServicioComponent, ListaServiciosComponent, CategoriasComponent, ListaProductosComponent, AgregarServiciosComponent,EditarServiciosComponent]
 
-    CarritoComponent,ServicioComponent,ListaServiciosComponent, CategoriasComponent, ListaProductosComponent,AgregarServiciosComponent]
 
-   
 })
 export class PagesModule { }

@@ -20,6 +20,7 @@ import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { ListaProductosComponent } from './pages/lista-productos/lista-productos.component'
 
 import { AgregarServiciosComponent } from './pages/agregar-servicios/agregar-servicios.component';
+import { EditarServiciosComponent } from './pages/editar-servicios/editar-servicios.component';
 
 
 const routes: Routes = [
@@ -42,9 +43,7 @@ const routes: Routes = [
 
   {path: 'categorias', component: CategoriasComponent},
   {path: 'lista-productos',component:ListaProductosComponent},
-
-
-
+  {path: 'editar-servicios/:id',component:EditarServiciosComponent},
   {path: 'agregar-servicios',component:AgregarServiciosComponent},
 
 

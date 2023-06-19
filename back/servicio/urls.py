@@ -10,4 +10,5 @@ urlpatterns=[
     path('',include(router.urls)),
     path('api/servicio/<servicio>/',views.servicioList),
     path('api/servicio/<pk>/',views.servicioList),
+    path('api/servicio/<pk>/update/',views.servicioList),
 ]
