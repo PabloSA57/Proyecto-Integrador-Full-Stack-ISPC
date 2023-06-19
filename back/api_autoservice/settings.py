@@ -112,8 +112,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'autoservice',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'admin',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }

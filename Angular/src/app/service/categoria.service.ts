@@ -18,7 +18,7 @@ ngOnInit(){}
 
 //categorias
 obtenerCategorias():Observable<any>{
-   return this.http.get(this.url+"categoria");
+   return this.http.get(this.url+"categoria/");
    
  }
 

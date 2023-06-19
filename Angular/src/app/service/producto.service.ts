@@ -12,7 +12,7 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   public traerProductos():Observable<any>{
-    return this.http.get(this.url +"producto");
+    return this.http.get(this.url +"producto/");
 
   };
   
@@ -26,7 +26,7 @@ export class ProductoService {
   };
 
   public traerCategorias():Observable<any>{
-    return this.http.get(this.url +"categoria");
+    return this.http.get(this.url +"categoria/");
 
   };
   public categoria(Id:number): Observable<any>{
