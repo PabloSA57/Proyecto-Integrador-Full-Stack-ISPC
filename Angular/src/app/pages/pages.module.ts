@@ -26,6 +26,7 @@ import { ListaProductosComponent } from './lista-productos/lista-productos.compo
 import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios.component';
 import { AgregarProductosComponent } from './agregar-productos/agregar-productos.component';
 import { AgregarCategoriasComponent } from './agregar-categorias/agregar-categorias.component';
+import { EditarCategoriasComponent } from './editar-categorias/editar-categorias.component';
 
 
 
@@ -55,7 +56,8 @@ import { AgregarCategoriasComponent } from './agregar-categorias/agregar-categor
 
     AgregarServiciosComponent,
         AgregarProductosComponent,
-        AgregarCategoriasComponent
+        AgregarCategoriasComponent,
+        EditarCategoriasComponent
 
   ],
   imports: [
@@ -68,7 +70,7 @@ import { AgregarCategoriasComponent } from './agregar-categorias/agregar-categor
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
     SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
 
-    CarritoComponent,ServicioComponent,ListaServiciosComponent, CategoriasComponent, ListaProductosComponent,AgregarServiciosComponent, AgregarCategoriasComponent, AgregarProductosComponent]
+    CarritoComponent,ServicioComponent,ListaServiciosComponent, CategoriasComponent, ListaProductosComponent,AgregarServiciosComponent, AgregarCategoriasComponent, AgregarProductosComponent, EditarCategoriasComponent]
 
    
 })

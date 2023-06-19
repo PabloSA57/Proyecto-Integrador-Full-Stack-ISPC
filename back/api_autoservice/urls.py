@@ -49,7 +49,9 @@ urlpatterns = [
     path('api/', include('categoria.urls')),
     
     path('api/categoria/<pk>/', categoriaList),
+    path('api/categoria/update/<pk>/', categoriaList),
     path('api/categoria/', categoriaList),
+    path('api/categoria/detail/<pk>/', categoriaList)
 
   
 

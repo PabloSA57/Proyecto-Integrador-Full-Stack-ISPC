@@ -22,10 +22,11 @@ obtenerCategorias():Observable<any>{
    
  }
 
-// obtener categoria
-//  public detail(Id:number): Observable<any>{
-//    return this.http.get<any>(this.url+'categoria/'+ Id + '/');
-//  };
+//obtener categoria
+ public detail(id:number): Observable<Categoria>{
+  //  return this.http.get<Categoria>(this.url+'categoria/'+ `detail/${id} `);
+  return this.http.get<Categoria>(this.url + 'categoria/'+ id + '/');
+ };
 
 //alta de una categoría
 public create(categoria:any):Observable<any>{
@@ -34,8 +35,9 @@ public create(categoria:any):Observable<any>{
 } 
 
 //actualizar categoría
-public update(id:any,data:any): Observable<any>{
- return this.http.put(`${this.url+'categoria'}/${id}`,data);
+public update(id:any,categoria: Categoria): Observable<any>{
+//  return this.http.put(this.url+'categoria/'+ `update/${id}`+ '/',categoria);
+  return this.http.put(this.url+'categoria/'+id+ '/',categoria);  
 }
 
 //eliminar categoría

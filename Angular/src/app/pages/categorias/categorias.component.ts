@@ -46,4 +46,6 @@ constructor(private cat: CategoriaService, private activatedRoute: ActivatedRout
         });
   }
 
+  
+
 }
