@@ -20,6 +20,9 @@ import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { ListaProductosComponent } from './pages/lista-productos/lista-productos.component'
 
 import { AgregarServiciosComponent } from './pages/agregar-servicios/agregar-servicios.component';
+import { AgregarCategoriasComponent } from './pages/agregar-categorias/agregar-categorias.component';
+import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
+import { EditarCategoriasComponent } from './pages/editar-categorias/editar-categorias.component';
 
 
 const routes: Routes = [
@@ -46,6 +49,9 @@ const routes: Routes = [
 
 
   {path: 'agregar-servicios',component:AgregarServiciosComponent},
+  {path: 'agregar-categorias', component: AgregarCategoriasComponent},
+  {path: 'agregar-productos', component: AgregarProductosComponent},
+  {path: 'editar-categorias/:id', component: EditarCategoriasComponent},
 
 
 
