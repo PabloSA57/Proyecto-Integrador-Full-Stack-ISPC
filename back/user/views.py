@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate
+from django.contrib.auth import login as rest_framework_login
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -25,9 +26,11 @@ def login(request):
     user = authenticate(email=email, password=password)
     print(user)
     if user:
-        token = get_tokens_for_user(user)
+        rest_framework_login(request._request, user)
+        token = RefreshToken.for_user(user)
+        token['is_admin'] = user.is_staff
 
-        return Response(data={"access_token": token.get('access'), "refresh_token": token.get("refresh")}, status=status.HTTP_200_OK)
+        return Response(data={"access_token": str(token.access_token), "refresh_token": str(token), "is_admin": user.is_staff}, status=status.HTTP_200_OK)
     return Response(data={"message": "No se encontro ningun usuario"}, status=status.HTTP_404_NOT_FOUND)
 
 

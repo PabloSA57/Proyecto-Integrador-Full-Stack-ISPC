@@ -21,6 +21,10 @@ export class AgregarProductosComponent {
   cantidad: string = "";
   categoria: string = "";
   fecha_creacion: string = "";
+<<<<<<< HEAD
+=======
+  categoria: number = 1;
+>>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
 
   constructor(private productoServicio: ProductoService, private router: Router) {
 
@@ -92,6 +96,7 @@ export class AgregarProductosComponent {
       ,
       error => console.log(error)
 
+<<<<<<< HEAD
     );
 
 /*
@@ -101,6 +106,12 @@ export class AgregarProductosComponent {
       document.getElementById("cat").value = municipio;
     }*/
 
+=======
+  create(): void {
+    const producto = new Producto(this.nombre,this.descripcion, this.precio,this.fecha_creacion,this.imagen,this.cantidad, this.categoria);
+    this.productoServicio.create(producto).subscribe(data=>this.router.navigate(['/lista-productos']));
+    console.log(producto)
+>>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
   }
 
 

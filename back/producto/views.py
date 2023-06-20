@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 from django.shortcuts import render
 from rest_framework import viewsets,generics,status
+=======
+from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
+>>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
 from .serializer import ProductoSerializer
 from .models import Producto
 from rest_framework.views import APIView
@@ -11,8 +16,8 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 
 
-
 class ProductoViewSet(viewsets.ModelViewSet):
+<<<<<<< HEAD
     queryset=Producto.objects.all()
     serializer_class=ProductoSerializer
 
@@ -59,3 +64,9 @@ def productoList(request, format=None):
         # return HttpResponse(status=204)    #1
         return Response(status=status.HTTP_204_NO_CONTENT)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+=======
+    print("producto")
+    permission_classes = [AllowAny]
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+>>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509

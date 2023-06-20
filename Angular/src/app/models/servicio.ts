@@ -6,6 +6,8 @@ export class Servicio {
     precio: string;
     fecha_creacion?: string;
     
+    
+
     constructor(nombre:string,descripcion:string,precio:string,fecha_creacion:string,imagen:File){
 
         this.nombre=nombre;
@@ -15,4 +17,5 @@ export class Servicio {
         this.fecha_creacion=fecha_creacion;
         
     }
+    
 }
