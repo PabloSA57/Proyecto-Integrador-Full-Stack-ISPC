@@ -35,7 +35,7 @@ public create(data:any):Observable<any>{
 //actualizar servicio
 public update(id:any,servicio:any): Observable<any>{
 
-  return this.http.put(this.url+'servicio/'+id+'/',servicio);
+  return this.http.put(this.url+'servicio/'+id+'/',servicio+"/");
 
 }
 // http://localhost:8000/api/servicio/servicio/9/

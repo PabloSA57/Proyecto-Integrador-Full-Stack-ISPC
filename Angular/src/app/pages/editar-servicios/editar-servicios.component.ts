@@ -27,7 +27,7 @@ export class EditarServiciosComponent {
     this.servicioService.detail(id).subscribe(
       data => {
         this.servicio = data;
-      
+
 
       }, err => {
         alert("Error al traer la categoria");
@@ -75,29 +75,36 @@ export class EditarServiciosComponent {
     console.log("se guardo la modificacion del servicio " + newServicio.fecha_creacion);
     console.log("se guardo la modificacion del servicio " + newServicio.imagen?.name);
 
+    
+
   }
 
 
 
   onUpdate(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+   
+    console.log("se guardo la modificacion del servicio " + this.servicio.nombre);
+    console.log("se guardo la modificacion del servicio " + this.servicio.descripcion);
+    console.log("se guardo la modificacion del servicio " + this.servicio.precio);
+    console.log("se guardo la modificacion del servicio " + this.servicio.fecha_creacion);
 
-
-    this.servicioService.update(id, this.servicio).subscribe(
+    this.servicio.nombre = this.nombre;
+    this.servicio.descripcion = this.descripcion;
+    this.servicio.precio = this.precio;
+    this.servicio.imagen = this.imagen;
+    
+    this.servicioService.update(this.servicio.id, this.servicio).subscribe(
       data => {
-        this.servicio.nombre = this.nombre;
-        this.servicio.descripcion = this.descripcion;
-        this.servicio.precio = this.precio;
-        this.servicio.imagen = this.imagen;
-        console.log("se guardo la modificacion del servicio " + this.servicio.nombre);
-        console.log("se guardo la modificacion del servicio " + this.servicio.descripcion);
-        console.log("se guardo la modificacion del servicio " + this.servicio.precio);
-        console.log("se guardo la modificacion del servicio " + this.servicio.fecha_creacion);
+
         console.log("se guardo la modificacion del servicio " + this.servicio.imagen?.name);
         console.log("se al modificar la servicio ", this.servicio);
 
       }, err => {
         console.log(err)
+        this.servicio.nombre = this.nombre;
+        this.servicio.descripcion = this.descripcion;
+        this.servicio.precio = this.precio;
+        this.servicio.imagen = this.imagen;
         console.log("Error al modificar la servicio ", this.servicio);
       }
     )
