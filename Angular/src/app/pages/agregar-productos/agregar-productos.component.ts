@@ -13,7 +13,7 @@ export class AgregarProductosComponent {
   productos: any = {};
   categorias: any = {};
 
-  
+
   nombre: string = "";
   imagen!: File;
   descripcion: string = "";
@@ -38,7 +38,7 @@ export class AgregarProductosComponent {
     })
   }
 
- 
+
 
   guardarNombre(event: any) {
     console.log(this.nombre = event.target.value)
@@ -69,17 +69,7 @@ export class AgregarProductosComponent {
 
 
 
-  /*
-    create(): void {
-      let producto = this.productos;
-      console.log(producto.nombre)
-      this.productoServicio.create(producto).subscribe(
-        data=>this.router.navigate(['/productos'])
-      )
-  
-  
-      
-    }*/
+
 
   create() {
     const produ = new FormData();
@@ -96,22 +86,10 @@ export class AgregarProductosComponent {
       ,
       error => console.log(error)
 
-<<<<<<< HEAD
     );
 
-/*
-    function actualizarValorMunicipioInm() {
-      let municipio = document.getElementById("catsel").value;
-      //Se actualiza en municipio inm
-      document.getElementById("cat").value = municipio;
-    }*/
 
-=======
-  create(): void {
-    const producto = new Producto(this.nombre,this.descripcion, this.precio,this.fecha_creacion,this.imagen,this.cantidad, this.categoria);
-    this.productoServicio.create(producto).subscribe(data=>this.router.navigate(['/lista-productos']));
-    console.log(producto)
->>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
+
   }
 
 
