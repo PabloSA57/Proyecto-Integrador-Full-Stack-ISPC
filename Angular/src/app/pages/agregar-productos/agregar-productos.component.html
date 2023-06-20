@@ -45,6 +45,7 @@
       <label class="form-label">Categoría</label>
       
         <select class="form-control cat" id="catsel" name="categoria_sel" (change)="selectCategoria($event)">
+          <option value="">Selecione una categoria</option>
           <option *ngFor="let cat of categorias" value={{cat.id}}> {{cat.nombre}}</option>
         </select>
       
@@ -63,18 +64,7 @@
   </div>
 
 
-  <!-- <div class="categorias" >
 
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Categorias 
-    </a>
-    <ul class="dropdown-menu">
-      <li ><a class="dropdown-item" href="/productos">Todas</a></li>
-      <li *ngFor="let cat of categorias"><a class="dropdown-item" href="/productos/{{cat.id}}">{{cat.nombre}}</a></li>
-      
-    </ul>
-  
-</div> -->
 
   <button class="btn" type="submit">Cargar Producto</button>
 
