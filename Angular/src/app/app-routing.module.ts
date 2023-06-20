@@ -26,6 +26,7 @@ import { EditarCategoriasComponent } from './pages/editar-categorias/editar-cate
 
 import { AuthRedirectGuard } from './guards/auth-redirect.guard';
 import { AuthClientGuard } from './guards/auth-client.guard';
+import { EditarProductosComponent } from './pages/editar-productos/editar-productos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -42,18 +43,16 @@ const routes: Routes = [
   {path: 'productos', component: ProductosComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
   {path: 'articulo/:id', component: ArticuloComponent},
+  {path: 'articulo/', component: ArticuloComponent},
   {path: 'servicio/:id', component:ServicioComponent},
   {path: 'lista-servicios',component:ListaServiciosComponent},
-
   {path: 'categorias', component: CategoriasComponent},
   {path: 'lista-productos',component:ListaProductosComponent},
-
-
-
   {path: 'agregar-servicios',component:AgregarServiciosComponent},
   {path: 'agregar-categorias', component: AgregarCategoriasComponent},
   {path: 'agregar-productos', component: AgregarProductosComponent},
   {path: 'editar-categorias/:id', component: EditarCategoriasComponent},
+  {path: 'editar-productos/:id', component:EditarProductosComponent},
 
 
 

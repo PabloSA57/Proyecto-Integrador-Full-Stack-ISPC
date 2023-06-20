@@ -22,16 +22,24 @@ h4{
 }
 .cat{
     display: flex;
-    width: 80%;
-    margin: 0px;
+    width: 76%;
+    margin: 2%;
+    padding: 0.375rem 0.75rem;
+
 }
 .catb{
     display: flex;
     width: 20%;
     margin: 0px;
+    padding: 0.375rem 0.75rem;
+
    
 }
 categoria{
     display: flex;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+.imagen{
+    width: 80px;
 }

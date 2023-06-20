@@ -17,7 +17,7 @@ export class ProductoService {
   };
   
   public detail(Id:number): Observable<any>{
-    return this.http.get<any>(this.url + 'producto/'+ Id);
+    return this.http.get<any>(this.url + 'producto/'+ Id + '/');
   };
 
   public detailCat(Id:number): Observable<any>{
@@ -35,17 +35,19 @@ export class ProductoService {
 
   //alta de una producto
 public create(data:any):Observable<any>{
-  return this.http.post(this.url,data);
+  //return this.http.post(this.url,data);
+  console.log('servicio ' + data.nombre)
+  return this.http.post(this.url +'producto/',data );
  } 
  
  //actualizar producto
  public update(id:any,data:any): Observable<any>{
-  return this.http.put(`${this.url}/${id}`,data);
+  return this.http.put(`${this.url}producto/${id}/`,data);
  }
  
  //eliminar producto
  public delete(id:any):Observable<any>{
-  return this.http.delete(`${this.url}${id}`);
+  return this.http.delete(`${this.url}producto/${id}/`);
  }
 
 }

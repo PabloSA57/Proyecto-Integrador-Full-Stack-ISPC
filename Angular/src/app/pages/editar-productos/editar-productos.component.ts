@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductoService } from 'src/app/service/producto.service';
-import { Producto } from 'src/app/models/producto'
-import { Categoria } from 'src/app/models/categoria';
 
 @Component({
-  selector: 'app-agregar-productos',
-  templateUrl: './agregar-productos.component.html',
-  styleUrls: ['./agregar-productos.component.css']
+  selector: 'app-editar-productos',
+  templateUrl: './editar-productos.component.html',
+  styleUrls: ['./editar-productos.component.css']
 })
-export class AgregarProductosComponent {
+
+export class EditarProductosComponent {
+
   productos: any = {};
   categorias: any = {};
 
-  
+  id: string = "";
   nombre: string = "";
   imagen!: File;
   descripcion: string = "";
@@ -22,11 +22,25 @@ export class AgregarProductosComponent {
   categoria: string = "";
   fecha_creacion: string = "";
 
-  constructor(private productoServicio: ProductoService, private router: Router) {
+  constructor(private productoServicio: ProductoService, private activatedRouter: ActivatedRoute, private router: Router) {
+
+    const id = this.activatedRouter.snapshot.params['id'];
+    let datos:any= {};
+    this.productoServicio.detail(id).subscribe(
+      data => {
+        this.productos = data;
+        
+        
+      }, err => {
+        alert("Error al cargar");
+        this.router.navigate(['']);
+      }
+    )
 
   }
 
   ngOnInit(): void {
+
 
     this.productoServicio.traerCategorias().subscribe(resp2 => {
       this.categorias = resp2;
@@ -34,7 +48,9 @@ export class AgregarProductosComponent {
     })
   }
 
- 
+  guardarId(event: any) {
+    console.log(this.id = event.target.value)
+  }
 
   guardarNombre(event: any) {
     console.log(this.nombre = event.target.value)
@@ -63,45 +79,24 @@ export class AgregarProductosComponent {
     console.log(this.imagen = event.target.files[0])
   }
 
-
-
-  /*
-    create(): void {
-      let producto = this.productos;
-      console.log(producto.nombre)
-      this.productoServicio.create(producto).subscribe(
-        data=>this.router.navigate(['/productos'])
-      )
-  
-  
-      
-    }*/
-
-  create() {
+  actualizar() {
     const produ = new FormData();
-    produ.append('nombre', this.nombre);
-    produ.append('descripcion', this.descripcion);
-    produ.append('precio', this.precio);
-    produ.append('cantidad', this.cantidad);
-    produ.append('categoria', this.categoria);
-    produ.append('fecha_creacion', this.fecha_creacion);
+    //produ.append('nombre', this.productos.id);
+    produ.append('nombre', this.productos.nombre);
+    produ.append('descripcion', this.productos.descripcion);
+    produ.append('precio', this.productos.precio);
+    produ.append('cantidad', this.productos.cantidad);
+    produ.append('categoria', this.productos.categoria);
+    //produ.append('fecha_creacion', this.fecha_creacion);
     produ.append('imagen', this.imagen, this.imagen!.name);
-    this.productoServicio.create(produ).subscribe(
-      servicio => this.router.navigate(['/productos'])
+    
+    console.log(this.productos.id)
+    this.productoServicio.update(this.productos.id,produ).subscribe(
+      data => this.router.navigate(['/productos'])
 
       ,
       error => console.log(error)
 
     );
-
-/*
-    function actualizarValorMunicipioInm() {
-      let municipio = document.getElementById("catsel").value;
-      //Se actualiza en municipio inm
-      document.getElementById("cat").value = municipio;
-    }*/
-
-  }
-
-
+    }
 }

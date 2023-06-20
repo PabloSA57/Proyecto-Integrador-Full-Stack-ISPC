@@ -26,11 +26,24 @@ export class ListaProductosComponent implements OnInit{
         this.router.navigate(['']);
       }
     })
-  
 
-   
-
+    
+  }
+  eliminar(produc:any){
+    this.miProd.forEach((producto:any)=>{
+      if(producto.id== produc.id){
+        this.prod.delete(produc.id).subscribe(
+          res=>this.prod.traerProductos().subscribe(
+            Response=>this.miProd=Response
+          )
+        );
+        console.log('elimino el producto: '+this.miProd.id);
+      }
+    })
 
   }
+
+  
+
 
 }
