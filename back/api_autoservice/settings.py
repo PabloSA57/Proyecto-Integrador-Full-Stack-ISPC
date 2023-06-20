@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -108,16 +109,24 @@ CSRF_TRUSTED_ORIGINS = [
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'autoservice',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#       'NAME': 'autoservice',
+#       'USER': 'root',
+#      'PASSWORD': 'root',
+#     'HOST': 'localhost',
+#    'PORT': '3306',
+#  }
+# }
+# DATABASES = {
+#   'default': {
+#      'ENGINE': 'mysql.connector.django',
+#     'NAME': 'autoservice',
+#    'USER': 'root',
+#   'PASSWORD': '13853211ps',
+#  'HOST': 'localhost',
+#  'PORT': '3305',
+# }
+# }
 
 
 # Password validation
@@ -156,20 +165,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#para que la imagen cargue
-import os
-MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+# para que la imagen cargue
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static-only')
+STATIC_ROOT = os.path.join(os.path.dirname(
+    os.path.dirname(__file__)), 'static', 'static-only')
 
-STATICFILES_DIRS =[
+STATICFILES_DIRS = [
     # BASE_DIR / 'photos',
     os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static'),
 ]
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'templates'),
+    os.path.join(os.path.dirname(os.path.dirname(__file__)),
+                 'static', 'templates'),
 )
 
 # Default primary key field type
@@ -185,4 +195,4 @@ REST_FRAMEWORK = {
     )
 }
 
-APPEND_SLASH=False
+APPEND_SLASH = False
