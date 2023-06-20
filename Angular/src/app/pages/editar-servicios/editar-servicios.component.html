@@ -24,38 +24,38 @@
       <button class="btn-btn-primary" type="submit" value="submit" [disabled]="!form.valid">Editar Servicio</button>
     
 </form> -->
-<h4>Cargar Servicio</h4>
+<h4>Editar Servicio</h4>
 
 <form method="put" class="col-6" (ngSubmit)="onUpdate()" enctype="multipart/form-data">
     
 <div class="mb-3" ngForm="form"  (change)="guardarNombre($event)">
     <label  class="form-label">Nombre del Servicio</label>
-    <input type="text" class="form-control" name="nombre"  [placeholder]="servicio.nombre" [ngModel]="nombre">
+    <input type="text" class="form-control" name="nombre"  [placeholder]="servicio.nombre">
   </div>
 
   <div class="mb-3" (change)="enviarFoto($event)">
     <label for="formFile" class="form-label">Imagen</label>
     <br>
     <img src="{{servicio.imagen}}" alt="" height="150px">
-    <input class="form-control" type="file" name="imagen"  [placeholder]="servicio.imagen" [ngModel]="imagen">
+    <input class="form-control" type="file" name="imagen"  [placeholder]="servicio.imagen">
   </div>
 
   <div class="mb-3" (change)="guardarDescripcion($event)">
     <label  class="form-label">Descripción</label>
-    <textarea class="form-control"  rows="3" name="descripcion"  [placeholder]="servicio.descripcion" [ngModel]="descripcion"></textarea>
+    <textarea class="form-control"  rows="3" name="descripcion"  [placeholder]="servicio.descripcion" ></textarea>
   </div>
 
   <div class="mb-3" (change)="guardarPrecio($event)">
     <label  class="form-label">Precio</label>
-    <input type="text" class="form-control" name="precio" [placeholder]="servicio.precio" [ngModel]="precio">
+    <input type="text" class="form-control" name="precio" [placeholder]="servicio.precio">
   </div>
 
   <div class="mb-3" (change)="guardarFecha($event)">
     <label  class="form-label">Fecha</label>
-    <input type="text" class="form-control" name="fecha_creacion" [placeholder]="servicio.fecha_creacion" [ngModel]="fecha_creacion">
+    <input type="text" class="form-control" name="fecha_creacion" [placeholder]="servicio.fecha_creacion">
   </div>
 
 
-  <button class="btn btn-primary" >Cargar Servicio</button>
+  <button class="btn btn-primary" >Editar Servicio</button>
 
 </form>
