@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -27,6 +27,7 @@ import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios
 import { AgregarProductosComponent } from './agregar-productos/agregar-productos.component';
 import { AgregarCategoriasComponent } from './agregar-categorias/agregar-categorias.component';
 import { EditarCategoriasComponent } from './editar-categorias/editar-categorias.component';
+import { EditarServiciosComponent } from './editar-servicios/editar-servicios.component';
 
 
 
@@ -55,9 +56,10 @@ import { EditarCategoriasComponent } from './editar-categorias/editar-categorias
 
 
     AgregarServiciosComponent,
-        AgregarProductosComponent,
-        AgregarCategoriasComponent,
-        EditarCategoriasComponent
+    AgregarProductosComponent,
+    AgregarCategoriasComponent,
+    EditarCategoriasComponent,
+    EditarServiciosComponent
 
   ],
   imports: [
@@ -67,11 +69,12 @@ import { EditarCategoriasComponent } from './editar-categorias/editar-categorias
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent, 
-    SucursalesComponent, ContactoComponent, RegistrarseComponent,LoginComponent, 
+  exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent,
+    SucursalesComponent, ContactoComponent, RegistrarseComponent, LoginComponent,
+    CarritoComponent, ServicioComponent, ListaServiciosComponent, CategoriasComponent, ListaProductosComponent, AgregarServiciosComponent, EditarServiciosComponent,
+  AgregarCategoriasComponent, AgregarProductosComponent, EditarCategoriasComponent
+  
+  ]
 
-    CarritoComponent,ServicioComponent,ListaServiciosComponent, CategoriasComponent, ListaProductosComponent,AgregarServiciosComponent, AgregarCategoriasComponent, AgregarProductosComponent, EditarCategoriasComponent]
-
-   
 })
 export class PagesModule { }
