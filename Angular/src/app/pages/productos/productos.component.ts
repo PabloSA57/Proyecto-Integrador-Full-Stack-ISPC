@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/service/producto.service';
+import { StoreCartService } from 'src/app/service/store-cart.service';
 
 @Component({
   selector: 'app-productos',
@@ -13,12 +15,12 @@ export class ProductosComponent implements OnInit {
   categorias: any={};
   productosCat: any={};
   catSelec: any={};
-  
+  isCart: boolean = false
 
-  constructor(private miProductos: ProductoService, private activatedRouter: ActivatedRoute, private router: Router ) {
+  constructor(private miProductos: ProductoService, private activatedRouter: ActivatedRoute, private router: Router, private cartService: StoreCartService ) {
     
   }
-
+  //cambio
   ngOnInit(): void {
     
     let id = this.activatedRouter.snapshot.params['id'];
@@ -49,6 +51,10 @@ export class ProductosComponent implements OnInit {
 
     })
 
-
   }
+
+  addProductToCart(product: any){
+    this.cartService.addProduct({...product, cantidad:1})
+  }
+  
 }

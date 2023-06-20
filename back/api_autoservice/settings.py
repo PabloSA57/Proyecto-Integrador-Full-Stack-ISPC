@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -117,16 +117,16 @@ CSRF_TRUSTED_ORIGINS = [
 #    'PORT': '3306',
 #  }
 # }
-# DATABASES = {
-#   'default': {
-#      'ENGINE': 'mysql.connector.django',
-#     'NAME': 'autoservice',
-#    'USER': 'root',
-#   'PASSWORD': '13853211ps',
-#  'HOST': 'localhost',
-#  'PORT': '3305',
-# }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'autoservice',
+        'USER': 'root',
+        'PASSWORD': '13853211ps',
+        'HOST': 'localhost',
+        'PORT': '3305',
+    }
+}
 
 
 # Password validation
@@ -189,10 +189,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "user.UserAccount"
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
+# REST_FRAMEWORK = {
+#   'DEFAULT_AUTHENTICATION_CLASSES': (
+#      'rest_framework_simplejwt.authentication.JWTAuthentication',
+# )
+# }
 
 APPEND_SLASH = False

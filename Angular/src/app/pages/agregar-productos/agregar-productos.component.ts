@@ -17,7 +17,7 @@ export class AgregarProductosComponent {
   precio: number = 0;
   cantidad: number = 0;
   fecha_creacion: string = "";
-  categoria: Categoria = {};
+  categoria: number = 1;
 
   constructor(private productoServicio: ProductoService, private router: Router){
 
@@ -27,9 +27,7 @@ export class AgregarProductosComponent {
 
   create(): void {
     const producto = new Producto(this.nombre,this.descripcion, this.precio,this.fecha_creacion,this.imagen,this.cantidad, this.categoria);
-    this.productoServicio.create(producto).subscribe(
-      data=>this.router.navigate(['/lista-productos'])
-    );
+    this.productoServicio.create(producto).subscribe(data=>this.router.navigate(['/lista-productos']));
     console.log(producto)
   }
 }

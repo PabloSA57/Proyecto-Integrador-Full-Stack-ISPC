@@ -13,6 +13,8 @@ export class PayService {
   ) { }
 
   preference(items: Producto[]){
-    return this.http.post<{init_point: string}>(`${this.apiUrl}/venta/preference`, items)
+    console.log(items,"service")
+    return this.http.post<{init_point: string}>(`${this.apiUrl}/venta/preference`, {
+      items: items})
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/models/product.model';
+import { RequestStatus } from 'src/app/models/statusrequest';
 import { PayService } from 'src/app/service/pay.service';
 import { StoreCartService } from 'src/app/service/store-cart.service';
 
@@ -11,7 +12,7 @@ import { StoreCartService } from 'src/app/service/store-cart.service';
 export class CarritoComponent implements OnInit {
 
   products: Producto[] = []
-
+  status: RequestStatus = 'init'
   total_precio = 0
   constructor(
     private serviceStore: StoreCartService,
@@ -29,6 +30,7 @@ export class CarritoComponent implements OnInit {
   }
 
   preferenceMP(){
+    this.status = 'loading'
     this.payService.preference(this.products)
     .subscribe({
       next: (resp) => {
@@ -36,6 +38,7 @@ export class CarritoComponent implements OnInit {
         window.location.replace(resp.init_point)
       },
       error: (error) => {
+        this.status = 'failed'
         console.log(error)
       }
     })

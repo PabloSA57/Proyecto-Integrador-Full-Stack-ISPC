@@ -7,7 +7,7 @@ from datetime import datetime
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=255)
-    imagen = models.ImageField(upload_to='photos/%Y/%m/')
+    imagen = models.CharField(max_length=255)
     descripcion = models.TextField()
     precio = models.DecimalField(max_digits=6, decimal_places=2)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)

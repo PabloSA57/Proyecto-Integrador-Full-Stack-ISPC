@@ -8,9 +8,9 @@ export class Producto{
     precio?: number;
     cantidad?: number;
     fecha_creacion?: string;
-    categoria?: Categoria;
+    categoria?: number;
 
-    constructor(nombre:string,descripcion:string,precio:number,fecha_creacion:string,imagen:string, cantidad:number, categoria:Categoria){
+    constructor(nombre:string,descripcion:string,precio:number,fecha_creacion:string,imagen:string, cantidad:number, categoria:number){
 
         this.nombre=nombre;
         this.imagen=imagen;

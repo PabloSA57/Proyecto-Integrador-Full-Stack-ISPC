@@ -35,7 +35,7 @@ export class ProductoService {
 
   //alta de una producto
 public create(data:any):Observable<any>{
-  return this.http.post(this.url,data);
+  return this.http.post(`${this.url}producto/`, data);
  } 
  
  //actualizar producto
