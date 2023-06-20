@@ -111,8 +111,8 @@ CSRF_TRUSTED_ORIGINS = [
 
 # DATABASES = {
 #       'NAME': 'autoservice',
-#       'USER': 'root',
-#      'PASSWORD': 'root',
+#       'USER': 'admin',
+#      'PASSWORD': '',
 #     'HOST': 'localhost',
 #    'PORT': '3306',
 #  }

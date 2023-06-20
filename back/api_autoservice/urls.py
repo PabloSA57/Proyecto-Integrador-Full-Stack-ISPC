@@ -40,32 +40,15 @@ urlpatterns = [
     path('api/venta/', include('venta.urls')),
 
 
-<<<<<<< HEAD
-
-
-
-
-    path('api/', include('servicio.urls')),
-    path('api/servicio/servicioList/', views.servicioList),
-    path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
-
-    path('api/', include('categoria.urls')),
-
-=======
     # path('api/', include('servicio.urls')),
     # path('api/servicio/servicioList/',views.servicioList),
     # path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
     path('api/', include('categoria.urls')),
->>>>>>> 8ec174fdae2a346fec6543156a7c6f700fa7915e
     path('api/categoria/<pk>/', categoriaList),
     path('api/categoria/update/<pk>/', categoriaList),
     path('api/categoria/', categoriaList),
     path('api/categoria/detail/<pk>/', categoriaList)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8ec174fdae2a346fec6543156a7c6f700fa7915e
 ]
 
 # para que cargue la foto

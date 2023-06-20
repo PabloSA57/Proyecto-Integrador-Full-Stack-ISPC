@@ -35,13 +35,11 @@ export class ProductoService {
 
   //alta de una producto
 public create(data:any):Observable<any>{
-<<<<<<< HEAD
   //return this.http.post(this.url,data);
   console.log('servicio ' + data.nombre)
   return this.http.post(this.url +'producto/',data );
-=======
   return this.http.post(`${this.url}producto/`, data);
->>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
+
  } 
  
  //actualizar producto

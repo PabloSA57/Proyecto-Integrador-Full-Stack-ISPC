@@ -19,19 +19,14 @@ import { ProductosComponent } from './productos/productos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ServicioComponent } from './servicio/servicio.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
-
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
-
 import { AgregarServiciosComponent } from './agregar-servicios/agregar-servicios.component';
 import { AgregarProductosComponent } from './agregar-productos/agregar-productos.component';
 import { AgregarCategoriasComponent } from './agregar-categorias/agregar-categorias.component';
 import { EditarCategoriasComponent } from './editar-categorias/editar-categorias.component';
-<<<<<<< HEAD
 import { EditarProductosComponent } from './editar-productos/editar-productos.component';
-=======
 import { EditarServiciosComponent } from './editar-servicios/editar-servicios.component';
->>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
 
 
 
@@ -54,23 +49,14 @@ import { EditarServiciosComponent } from './editar-servicios/editar-servicios.co
     ArticuloComponent,
     ServicioComponent,
     ListaServiciosComponent,
-
     CategoriasComponent,
     ListaProductosComponent,
-
-
     AgregarServiciosComponent,
-<<<<<<< HEAD
-        AgregarProductosComponent,
-        AgregarCategoriasComponent,
-        EditarCategoriasComponent,
-        EditarProductosComponent
-=======
     AgregarProductosComponent,
     AgregarCategoriasComponent,
     EditarCategoriasComponent,
-    EditarServiciosComponent
->>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
+    EditarServiciosComponent,
+    EditarProductosComponent
 
   ],
   imports: [
@@ -82,9 +68,10 @@ import { EditarServiciosComponent } from './editar-servicios/editar-servicios.co
   ],
   exports: [DashboardComponent, ServiciosComponent, QuienesSomosComponent, IntegranteComponent,
     SucursalesComponent, ContactoComponent, RegistrarseComponent, LoginComponent,
-    CarritoComponent, ServicioComponent, ListaServiciosComponent, CategoriasComponent, ListaProductosComponent, AgregarServiciosComponent, EditarServiciosComponent,
-  AgregarCategoriasComponent, AgregarProductosComponent, EditarCategoriasComponent
-  
+    CarritoComponent, ServicioComponent, ListaServiciosComponent, CategoriasComponent,
+    ListaProductosComponent, AgregarServiciosComponent, EditarServiciosComponent,
+    AgregarCategoriasComponent, AgregarProductosComponent, EditarCategoriasComponent
+
   ]
 
 })

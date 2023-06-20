@@ -21,10 +21,6 @@ export class AgregarProductosComponent {
   cantidad: string = "";
   categoria: string = "";
   fecha_creacion: string = "";
-<<<<<<< HEAD
-=======
-  categoria: number = 1;
->>>>>>> 4a937ba0fce8859f1c7d24931fa73f5047ab1509
 
   constructor(private productoServicio: ProductoService, private router: Router) {
 
