@@ -37,23 +37,14 @@ urlpatterns = [
     path('api/servicio/', include('servicio.urls')),
     path('api/', include('producto.urls')),
 
-
-    
-
-
-
-    path('api/', include('servicio.urls')),
-    path('api/servicio/servicioList/',views.servicioList),
-    path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
-
+    # path('api/', include('servicio.urls')),
+    # path('api/servicio/servicioList/',views.servicioList),
+    # path('api/servicio/delete/<pk>/', ServicioUpdateDelete.as_view()),
     path('api/', include('categoria.urls')),
-    
     path('api/categoria/<pk>/', categoriaList),
     path('api/categoria/update/<pk>/', categoriaList),
     path('api/categoria/', categoriaList),
     path('api/categoria/detail/<pk>/', categoriaList)
-
-  
 
 ]
 

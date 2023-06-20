@@ -33,9 +33,12 @@ public create(data:any):Observable<any>{
 } 
 
 //actualizar servicio
-public update(id:any,data:any): Observable<any>{
-  return this.http.put(`${this.url}/${id}`,data+'/');
+public update(id:any,servicio:any): Observable<any>{
+
+  return this.http.put(this.url+'servicio/'+id+'/',servicio);
+
 }
+// http://localhost:8000/api/servicio/servicio/9/
 
 //eliminar servicio
 public delete(id:number):Observable<any>{

@@ -23,6 +23,7 @@ import { AgregarServiciosComponent } from './pages/agregar-servicios/agregar-ser
 import { AgregarCategoriasComponent } from './pages/agregar-categorias/agregar-categorias.component';
 import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
 import { EditarCategoriasComponent } from './pages/editar-categorias/editar-categorias.component';
+import { EditarServiciosComponent } from './pages/editar-servicios/editar-servicios.component';
 
 import { AuthRedirectGuard } from './guards/auth-redirect.guard';
 import { AuthClientGuard } from './guards/auth-client.guard';
@@ -47,9 +48,7 @@ const routes: Routes = [
 
   {path: 'categorias', component: CategoriasComponent},
   {path: 'lista-productos',component:ListaProductosComponent},
-
-
-
+  {path: 'editar-servicios/:id',component:EditarServiciosComponent},
   {path: 'agregar-servicios',component:AgregarServiciosComponent},
   {path: 'agregar-categorias', component: AgregarCategoriasComponent},
   {path: 'agregar-productos', component: AgregarProductosComponent},
