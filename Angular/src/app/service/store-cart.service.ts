@@ -36,12 +36,12 @@ export class StoreCartService {
     this.saveProduct()
   }
 
-  updateQuality(id: number, quality: number) {
+  updateQuality(id: number, cantidad: number) {
     this.myShoppingCart = this.myShoppingCart.map(p => {
       if(p.id === id){
         return {
           ...p,
-          quality: quality
+          cantidad: cantidad
         }
       }
       return p

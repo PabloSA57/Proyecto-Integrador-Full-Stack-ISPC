@@ -24,7 +24,7 @@ export class CardProductComponent {
   ){}
 
   ngOnInit(): void {
-      this.quality = this.product.quality ?? 1;
+      this.quality = this.product.cantidad ?? 1;
       const precioQuality = (this.product.precio * this.quality ).toString()
       this.precio = Number(Number.parseFloat(precioQuality).toFixed(2))
   }

@@ -1,6 +1,6 @@
 <h4>Lista de servicios</h4>
 
-<a href="/editar-servicio" class="btn btn-info">Agregar Servicio</a>
+<a href="/agregar-servicios" class="btn btn-info">Agregar Servicio</a>
 
 <table class="table">
     <thead>
@@ -23,13 +23,12 @@
         <td>{{item.descripcion}}</td>
         <td>{{item.precio}}</td>
         <td>{{item.fecha_creacion}}</td>
-        <td><a href=""><i class="bi bi-pencil-fill" id="edit"></i></a></td>
-        <td><a href=""><i class="bi bi-trash-fill" id="borrar"></i></a></td>
-        
-        
-        
+        <td><td><a href="editar-servicios/{{item.id}}" class="btn btn-primary" >Editar</a></td>
+        <td><button (click)=delete(item) class="btn btn-danger"> Borrar</button></td>
       </tr>
       
       
     </tbody>
   </table>
+
+  <a routerLink="/servicios" class="btn btn-info">Volver</a>

@@ -3,9 +3,12 @@ from categoria.models import Categoria
 from datetime import datetime
 
 # Create your models here.
+# def upload_path(instance,filename):
+#     return '/'.join(['imagen', str(instance.title),filename])
 
 
 class Servicio(models.Model):
+    id=models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=255)
     imagen = models.ImageField(upload_to='photos/')
     descripcion = models.TextField()
@@ -20,7 +23,7 @@ class Servicio(models.Model):
     def get_thumbnail(self):
         if self.imagen:
             return self.imagen.url
-        return ''
+        return 'imagen.url'
 
     def __str__(self):
         return self.nombre

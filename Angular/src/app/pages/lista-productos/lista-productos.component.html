@@ -1,6 +1,6 @@
 <h4>Lista de Productos</h4>
     
-<a href="/editar-producto" class="btn btn-info">Agregar Producto</a>
+<a href="/agregar-productos" class="btn btn-info">Agregar Producto</a>
 
 <table class="table">
     <thead>
@@ -26,9 +26,9 @@
         <td>{{item.precio}}</td>
         <td>{{item.cantidad}}</td>
         <td>{{item.fecha_creacion}}</td>
-        <td>{{item.categoria}}</td>
-        <td><a href=""><i class="bi bi-pencil-fill" id="edit"></i></a></td>
-        <td><a href=""><i class="bi bi-trash-fill" id="borrar"></i></a></td>
+        <td>{{item.categoria.nombre}}</td>
+        <td><a ><i class="bi bi-pencil-fill" id="edit" routerLink="/editar-productos/{{item.id}}"></i></a></td>
+        <td><a (click)=eliminar(item) ><i class="bi bi-trash-fill" id="borrar"></i></a></td>
         
         
         
@@ -37,3 +37,5 @@
       
     </tbody>
   </table>
+
+  <a routerLink="/productos" class="btn btn-info">Volver</a>

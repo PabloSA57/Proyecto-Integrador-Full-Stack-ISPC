@@ -33,4 +33,19 @@ constructor(private cat: CategoriaService, private activatedRoute: ActivatedRout
 
   }
 
+  delete(item:any){
+    this.miCat.forEach((categoria: any) => {
+          if (categoria.id == item.id) {
+            this.cat.delete(item.id).subscribe(
+                res=>this.cat.obtenerCategorias().subscribe(
+                Response=>this.miCat=Response
+                )
+            );
+            console.log('borre la categoria numero :'+item.id);
+          }
+        });
+  }
+
+  
+
 }

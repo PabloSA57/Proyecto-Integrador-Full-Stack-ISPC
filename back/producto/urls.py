@@ -8,4 +8,6 @@ router.register(r'producto',views.ProductoViewSet)
 
 urlpatterns=[
     path('',include(router.urls)),
+    path('api/producto/<servicio>/',views.productoList),
+    path('api/producto/<pk>/',views.productoList),
 ]

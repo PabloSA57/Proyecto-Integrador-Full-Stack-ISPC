@@ -41,8 +41,11 @@ export class LoginComponent implements OnInit {
       const {email, password} = this.form.getRawValue()
       this.authService.login(email as string, password as string)
       .subscribe({
-        next: (s) => {
+        next: (resp) => {
           this.status = 'success'
+          if(resp.is_admin){
+            this.router.navigate(['/cms'])
+          }
           this.router.navigate(['/home'])
         },
         error: () => {

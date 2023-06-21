@@ -17,7 +17,7 @@ export interface Producto {
     categoria: string;
     rating?: Rating;
     taxes?: number;
-    quality?: number
+    cantidad?: number
 }
 
 export interface CreateProductoDTO extends Omit<Producto, 'id' | "category"> {

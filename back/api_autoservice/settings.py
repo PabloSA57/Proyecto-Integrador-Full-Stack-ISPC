@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -108,12 +109,20 @@ CSRF_TRUSTED_ORIGINS = [
 #     }
 # }
 
+# DATABASES = {
+#       'NAME': 'autoservice',
+#       'USER': 'admin',
+#      'PASSWORD': '',
+#     'HOST': 'localhost',
+#    'PORT': '3306',
+#  }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'autoservice',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'admin',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -156,10 +165,22 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#para que la imagen cargue
-import os
-MEDIA_URL='/photos/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'photos')
+# para que la imagen cargue
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATIC_ROOT = os.path.join(os.path.dirname(
+    os.path.dirname(__file__)), 'static', 'static-only')
+
+STATICFILES_DIRS = [
+    # BASE_DIR / 'photos',
+    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static'),
+]
+
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(os.path.dirname(__file__)),
+                 'static', 'templates'),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -168,8 +189,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "user.UserAccount"
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
+# REST_FRAMEWORK = {
+#   'DEFAULT_AUTHENTICATION_CLASSES': (
+#      'rest_framework_simplejwt.authentication.JWTAuthentication',
+# )
+# }
+
+APPEND_SLASH = False
