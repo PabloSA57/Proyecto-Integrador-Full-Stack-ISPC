@@ -24,7 +24,7 @@ url:string="http://localhost:8000/api/servicio/"
 // servicio
 // obtener servicio
   public detail(Id:number): Observable<any>{
-    return this.http.get<any>(this.url + 'servicio/'+ Id);
+    return this.http.get<any>(this.url + 'servicio/'+ Id+ '/');
   };
 
 //alta de un servicio
