@@ -6,8 +6,8 @@ from rest_framework import status
 # SDK de Mercado Pago
 import mercadopago
 # Agrega credenciales
-#sdk = mercadopago.SDK(
-#    "APP_USR-936168452210572-061619-f651358d6e63a47ac60b46fe256f4e2d-582661966")
+sdk = mercadopago.SDK(
+    "APP_USR-936168452210572-061619-f651358d6e63a47ac60b46fe256f4e2d-582661966")
 
 
 class ReferenceMPView(APIView):
